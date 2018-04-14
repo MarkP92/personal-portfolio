@@ -3,3 +3,6 @@ MyPortfolio/secrets.py
 
 # PYC files
 *.pyc
+
+# VSCODE
+.vscode
