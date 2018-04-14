@@ -1,0 +1,11 @@
+{% extends 'project/project_base.html' %}
+
+{% block content %}
+    <div class="card">
+        <img class="card-img-top" src="" alt="Card Image Cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <p class="card-text">{{ project.description }}</p>
+        </div>
+    </div>
+{% endblock %}

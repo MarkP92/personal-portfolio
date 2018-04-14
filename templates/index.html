@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block hero %}
+    <div class="jumbotron jumbotron-fluid parallax hero-section">
+        <div class="container">
+            <div class="inside-jumbo">
+                <h1 class="display-3">Mark<br>Petersen</h1>
+                <p class="lead">Hej, verden! Velkommen til mit online portfolio.<br>Mit navn er Mark, jeg er 25 år og selvlært Webudvikler.<br>Jeg brænder for at kode og designe flotte hjemmesider.
+                <p><a class="btn btn-outline-light btn-lg" href="{% url 'project_list' %}" role="button">Projekter &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <section class="about-section container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xs-12">
+                    <h3>Om Mark</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolores quod sint perferendis vero! Ipsam repellat perferendis quis numquam nesciunt cum, iure ut inventore officia suscipit, unde odit eum, fugiat nemo maxime est eaque enim ullam voluptatibus! Commodi similique incidunt perspiciatis accusantium ipsum ullam provident, repellendus voluptates quis, modi adipisci?</p>
+                </div>
+                <div class="col-lg-3 col-xs-12">
+                    <ul class="skills">
+                        <li class="skill-item">HTML5</li><img class="skill-icon" src="{% static 'img/html_icon.png' %}" alt="HTML5">
+                        <li class="skill-item">CSS3</li><img class="skill-icon" src="{% static 'img/css_icon.png' %}" alt="CSS3">
+                        <li class="skill-item">JavaScript</li><img class="skill-icon" src="{% static 'img/js_icon.png' %}" alt="JavaScript">
+                        <li class="skill-item">Bootstrap 4</li><img class="skill-icon" src="{% static 'img/bootstrap_icon.png' %}" alt="Bootstrap 4">
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-xs-12">
+                    <ul class="skills">
+                        <li class="skill-item">jQuery</li><img class="skill-icon" src="{% static 'img/jquery_icon.png' %}" alt="jQuery">
+                        <li class="skill-item">Python</li><img class="skill-icon" src="{% static 'img/python_icon.png' %}" alt="Python">
+                        <li class="skill-item">Django</li><img class="skill-icon" src="{% static 'img/django_icon.svg' %}" alt="Django">
+                        <li class="skill-item">Git</li><img class="skill-icon" src="{% static 'img/git_icon.png' %}" alt="Git">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects-section">
+        <div class="container">
+            <h2>Projekter</h2>
+            <div class="row">
+                <div class="col-md-4 col-xs-12">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Qstay Bed & Breakfast</h5>
+                            <p class="card-text">Udvikling, design og SEO for Qstay Bed & Breakfast</p>
+                            <a href="#" class="btn btn-primary">Se mere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">KVJ Tegnestue</h5>
+                            <p class="card-text">Udvikling, design og SEO for KVJ Tegnestue</p>
+                            <a href="#" class="btn btn-primary">Se mere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section">
+        { kontakt formular her }
+    </section>
+    <section class="blog-section">
+        {% for post in post_list %}
+            <p class="blog-feed"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></p>
+        {% endfor %}
+    </section>
+{% endblock %}
+
+
+    

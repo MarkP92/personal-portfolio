@@ -1,0 +1,119 @@
+body {
+    font-family: 'Montserrat', 'Raleway', 'Anton', sans-serif;
+    font-size: 1em;
+    color: rgb(51, 51, 51);
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+    background-color: #eee;
+}
+
+body p {
+    font-family: 'Raleway', 'Anton', 'Montserrat', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.7;
+}
+
+body a {
+    color: #333;
+    line-height: 1.4;
+    font-weight: 800;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #333;
+    line-height: 1.4;
+}
+
+.hero-section {
+    background-image: url(../img/new_hero.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.inside-jumbo {
+    margin-top: 125px;
+}
+
+.inside-jumbo h1 {
+    font-size: 5em;
+    font-weight: 800;
+    color: #eee;
+    text-shadow: 1px 1px black;
+}
+
+.inside-jumbo p {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #eee;
+    text-shadow: 0.5px 0.5px black;
+}
+
+.main-content {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.about-section {
+    padding: 30px;
+}
+
+.projects-section {
+    padding: 30px;
+}
+
+.projects-section h2 {
+    padding-bottom: 20px;
+    font-size: 3em;
+}
+
+.contact-section {
+    padding: 30px;
+}
+
+.blog-section {
+    padding: 30px;
+}
+
+.parallax {
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed!important;
+    overflow: hidden;
+}
+
+.skills {
+    list-style-type: none;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.skill-item {
+    padding: 10px;
+}
+
+.skill-icon {
+    height: 35px;
+    width: 35px;
+    margin-bottom: 10px;
+}
+
+.post-list-item {
+    padding-bottom: 25px;
+}
+
+.post-content {
+    padding-top: 10px;
+}
+
+.post-image {
+    width: 300px;
+    height: 150px;
+}
+
+.card {
+    padding: 15px;
+    margin: 15px;
+    width: 100%;
+    border: 1px solid red;
+}
