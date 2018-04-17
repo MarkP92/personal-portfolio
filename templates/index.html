@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+<!-- HERO -->
 {% block hero %}
     <div class="jumbotron jumbotron-fluid parallax hero-section">
         <div class="container">
@@ -12,13 +12,14 @@
         </div>
     </div>
 {% endblock %}
-
+<!-- MAIN CONTENT -->
 {% block content %}
+    <!-- ABOUT SECTION -->
     <section class="about-section container-fluid">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-xs-12">
-                    <h3>Om Mark</h3>
+                    <h2>Om Mark</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolores quod sint perferendis vero! Ipsam repellat perferendis quis numquam nesciunt cum, iure ut inventore officia suscipit, unde odit eum, fugiat nemo maxime est eaque enim ullam voluptatibus! Commodi similique incidunt perspiciatis accusantium ipsum ullam provident, repellendus voluptates quis, modi adipisci?</p>
                 </div>
                 <div class="col-lg-3 col-xs-12">
@@ -40,58 +41,36 @@
             </div>
         </div>
     </section>
+    <!-- PROJECT SECTION -->
     <section class="projects-section">
         <div class="container">
             <h2>Projekter</h2>
             <div class="row">
                 <div class="col-md-4 col-xs-12">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="..." alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Qstay Bed & Breakfast</h5>
-                            <p class="card-text">Udvikling, design og SEO for Qstay Bed & Breakfast</p>
-                            <a href="#" class="btn btn-primary">Se mere</a>
+                    {% for project in project_list %}
+                        <div class="card">
+                            <img class="card-img-top" src="{{ project.image.url }}" alt="IMAGE NOT FOUND">
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="{% url 'project_detail' slug=project.slug %}">{{ project.title }}</a></h5>
+                                <p class="card-text">{{ project.description|safe }}</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-xs-12">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="..." alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">KVJ Tegnestue</h5>
-                            <p class="card-text">Udvikling, design og SEO for KVJ Tegnestue</p>
-                            <a href="#" class="btn btn-primary">Se mere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-xs-12">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="..." alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
     </section>
+    <!-- CONTACT SECTION -->
     <section class="contact-section">
-        <h1>Kontakt</h1>
-        { kontakt form her }
+        <h2>Kontakt</h2>
     </section>
+    <!-- BLOG SECTION -->
     <section class="blog-section">
-        {% for post in post_list %}
-            <div class="post-list-item">
-                <h1><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h1>
-                <div class="date author">
-                    <p>Published by {{ post.author }} on {{ post.published_at|date:"d-m-Y" }}</p>
-                </div>
-            </div>
-        {% endfor %}
+        <h2>Blog</h2>
+            {% include "blog/post_list.html" %}
     </section>
 {% endblock %}
+<!-- END CONTENT -->
 
 
     

@@ -7,7 +7,7 @@ import PIL
 class Project(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
-    image = models.ImageField(upload_to='img', null=True, blank=True)
+    image = models.ImageField(upload_to='../media/img', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(default='')
 

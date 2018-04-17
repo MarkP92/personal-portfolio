@@ -62,11 +62,6 @@ h1,h2,h3,h4,h5,h6 {
     padding: 30px;
 }
 
-.projects-section h2 {
-    padding-bottom: 20px;
-    font-size: 3em;
-}
-
 .contact-section {
     padding: 30px;
 }
@@ -115,5 +110,14 @@ h1,h2,h3,h4,h5,h6 {
     padding: 15px;
     margin: 15px;
     width: 100%;
-    border: 1px solid red;
+}
+
+.card-title {
+    font-size: 2em;
+}
+
+.card-img-top {
+    /* width: 1080px;
+    height: 720px; */
+    align-self: center;
 }

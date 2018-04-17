@@ -6,7 +6,7 @@
             {{ post.published_at }}
             <p>Skrevet af: {{ post.author }}</p>
         </div>
-    <img class="post-image" src="../../../media/img/ad.png" alt="post_image">
+    <img class="post-image" src="{{ post.image.url }}" alt="post_image">
     <p class="post-content">{{ post.text|safe|linebreaksbr }}</p>
 {% endblock %}
 
