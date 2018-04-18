@@ -25,6 +25,18 @@ h1,h2,h3,h4,h5,h6 {
     line-height: 1.4;
 }
 
+.nav-bg {
+    background: rgba(240, 240, 240, 0.8);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.6);
+}
+
+/* .active {
+    color: rgba(0,0,0,.8);
+} */
+
 .hero-section {
     background-image: url(../img/new_hero.jpg);
     background-repeat: no-repeat;
