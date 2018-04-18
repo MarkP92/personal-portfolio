@@ -11,6 +11,9 @@ class Project(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(default='')
 
+    class Meta:
+        ordering = ['-created_at']
+
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super().save(*args, **kwargs)

@@ -1,8 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import TemplateView, ListView, DetailView
 from blog.models import Post
 from blog.forms import PostForm
-from django.urls import reverse_lazy
 from django.utils import timezone
 
 

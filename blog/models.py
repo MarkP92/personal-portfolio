@@ -13,6 +13,9 @@ class Post(models.Model):
     slug = models.SlugField(default='')
     image = models.ImageField(upload_to='img', null=True, blank=True)
 
+    class Meta:
+        ordering = ['-created_at']
+
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super().save(*args, **kwargs)

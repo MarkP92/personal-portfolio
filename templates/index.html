@@ -7,7 +7,7 @@
             <div class="inside-jumbo">
                 <h1 class="display-3">Mark<br>Petersen</h1>
                 <p class="lead">Hej, verden! Velkommen til mit online portfolio.<br>Mit navn er Mark, jeg er 25 år og selvlært Webudvikler.<br>Jeg brænder for at kode og designe flotte hjemmesider.
-                <p><a class="btn btn-outline-light btn-lg" href="{% url 'project_list' %}" role="button">Projekter &raquo;</a></p>
+                <p><a class="btn btn-outline-light btn-lg cta" href="{% url 'project_list' %}" role="button">Projekter &raquo;</a></p>
             </div>
         </div>
     </div>
@@ -15,38 +15,36 @@
 <!-- MAIN CONTENT -->
 {% block content %}
     <!-- ABOUT SECTION -->
-    <section class="about-section container-fluid">
+    <section class="about-section section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-xs-12">
+                <div class="col">
                     <h2>Om Mark</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolores quod sint perferendis vero! Ipsam repellat perferendis quis numquam nesciunt cum, iure ut inventore officia suscipit, unde odit eum, fugiat nemo maxime est eaque enim ullam voluptatibus! Commodi similique incidunt perspiciatis accusantium ipsum ullam provident, repellendus voluptates quis, modi adipisci?</p>
+                    <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolores quod sint perferendis vero! Ipsam repellat perferendis quis numquam nesciunt cum, iure ut inventore officia suscipit, unde odit eum, fugiat nemo maxime est eaque enim ullam voluptatibus! Commodi similique incidunt perspiciatis accusantium ipsum ullam provident, repellendus voluptates quis, modi adipisci?</p>
                 </div>
-                <div class="col-lg-3 col-xs-12">
+            </div>
+            <div class="row">
+                <div class="col">
                     <ul class="skills">
-                        <li class="skill-item">HTML5</li><img class="skill-icon" src="{% static 'img/html_icon.png' %}" alt="HTML5">
-                        <li class="skill-item">CSS3</li><img class="skill-icon" src="{% static 'img/css_icon.png' %}" alt="CSS3">
-                        <li class="skill-item">JavaScript</li><img class="skill-icon" src="{% static 'img/js_icon.png' %}" alt="JavaScript">
-                        <li class="skill-item">Bootstrap 4</li><img class="skill-icon" src="{% static 'img/bootstrap_icon.png' %}" alt="Bootstrap 4">
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-xs-12">
-                    <ul class="skills">
-                        <li class="skill-item">jQuery</li><img class="skill-icon" src="{% static 'img/jquery_icon.png' %}" alt="jQuery">
-                        <li class="skill-item">Python</li><img class="skill-icon" src="{% static 'img/python_icon.png' %}" alt="Python">
-                        <li class="skill-item">Django</li><img class="skill-icon" src="{% static 'img/django_icon.svg' %}" alt="Django">
-                        <li class="skill-item">Git</li><img class="skill-icon" src="{% static 'img/git_icon.png' %}" alt="Git">
+                        <li class="skill-item"><img src="{% static 'img/html_icon.png' %}" /></li>
+                        <li class="skill-item"><img src="{% static 'img/css_icon.png' %}" /></li>
+                        <li class="skill-item"><img src="{% static 'img/js_icon.png' %}" /></li>
+                        <li class="skill-item"><img src="{% static 'img/bootstrap_icon.png' %}" /></li>
+                        <li class="skill-item"><img src="{% static 'img/jquery_icon.png' %}" /></li>
+                        <li class="skill-item"><img src="{% static 'img/python_icon.png' %}" /></li>
+                        <li class="skill-item"><img src="{% static 'img/django_icon.svg' %}" /></li>
+                        <li class="skill-item"><img src="{% static 'img/git_icon.png' %}" /></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
     <!-- PROJECT SECTION -->
-    <section class="projects-section">
+    <section class="projects-section section">
         <div class="container">
             <h2>Projekter</h2>
             <div class="row">
-                <div class="col-md-4 col-xs-12">
+                <div class="col">
                     {% for project in project_list %}
                         <div class="card">
                             <img class="card-img-top" src="{{ project.image.url }}" alt="IMAGE NOT FOUND">
@@ -61,13 +59,37 @@
         </div>
     </section>
     <!-- CONTACT SECTION -->
-    <section class="contact-section">
-        <h2>Kontakt</h2>
+    <section class="contact-section section">
+        <div class="cotainer">
+            <h2>Kontakt</h2>
+            <div class="row">
+                <div class="col">
+
+                </div>
+            </div>
+        </div>
     </section>
     <!-- BLOG SECTION -->
-    <section class="blog-section">
-        <h2>Blog</h2>
-            {% include "blog/post_list.html" %}
+    <section class="blog-section section">
+        <div class="container">
+            <h2>Blog</h2>
+            <div class="row">
+                <div class="col">
+                {% for post in post_list %}
+                    <div class="blog-feed card">
+                        {% if post.image %}
+                            <img class="card-img-top" src="{{ post.image.url }}" alt="IMAGE NOT FOUND">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h5>
+                            <p class="card-text">{{ post.author }}<br>
+                            {{ post.created_at }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
     </section>
 {% endblock %}
 <!-- END CONTENT -->

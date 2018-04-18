@@ -82,13 +82,28 @@
     {% endblock %}
 
     <div class="container main-content text-center">
-        <div class="col-lg-12 col-sm-6 col-xs-3">
+        <div class="col">
             {% block content %}
 
             {% endblock %}
         </div>
     </div>
-
+    <footer>
+        <div class="container footer">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col">
+                    <ul class="social">
+                        <li><a href="https://github.com/MarkP92"><img src="{% static 'img/GH64px.png' %}" alt=""></a></li>
+                        <li><a href="https://facebook.com/Mr.Quid"><img src="{% static 'img/FB72.png' %}" alt=""></a></li>
+                        <li><a href="https://twitter.com/MarkP_DK"><img src="{% static 'img/Twitter.png' %}" alt=""></a></li>
+                        <li><a href="https://stackoverflow.com/users/9548281/markpetersen"><img src="{% static 'img/SO.png' %}" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+    </footer>
     <!-- JAVASCRIPT -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
