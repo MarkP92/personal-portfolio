@@ -45,7 +45,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .inside-jumbo h1 {
     font-size: 8vw;
-    font-weight: 800;
+    font-weight: 1000;
     color: #eee;
     text-shadow: 1px 1px black;
 }
@@ -62,8 +62,15 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .main-content {
-    margin-top: 60px;
+    width: 80%;
+    margin: auto;
+    margin-top: 120px;
     margin-bottom: 50px;
+}
+
+.main-content h2 {
+    font-weight: 1000;
+    font-size: 2.4em;
 }
 
 .about-section {
@@ -73,11 +80,6 @@ h1,h2,h3,h4,h5,h6 {
 .projects-section {
     padding: 30px;
 }
-
-/* .projects-section .card {
-    width: 80%;
-    margin: auto;
-} */
 
 .contact-section {
     padding: 30px;
@@ -97,7 +99,7 @@ h1,h2,h3,h4,h5,h6 {
 .skills {
     list-style-type: none;
     font-size: 1.2em;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .skill-item {
@@ -118,7 +120,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .card {
-    width: 80%;
     padding: 25px;
     margin: auto;
     margin-bottom: 20px;
@@ -127,12 +128,6 @@ h1,h2,h3,h4,h5,h6 {
 .card-title {
     font-size: 2em;
 }
-
-/* .blog-feed {
-    padding: 30px;
-    width: 80%;
-    margin: auto;
-} */
 
 .section {
     margin-top: 20px;
@@ -151,6 +146,7 @@ h1,h2,h3,h4,h5,h6 {
 }
    
 .skill-item img:hover {
+    opacity: 0.9;
     -webkit-opacity: 0.9;
     -moz-opacity: 0.9;
     transform: scale(1.5);
@@ -161,13 +157,11 @@ h1,h2,h3,h4,h5,h6 {
     padding: 15px;
 }
 
-.footer {
-    margin-top: 35px;
-}
-
-.footer ul {
+.social {
     margin: auto;
     list-style-type: none;
+    text-align: center;
+    padding: 0;
 }
 
 .social li {
@@ -175,9 +169,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .social li img {
-    width: 50px;
-    height: 50px;
-    padding: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
 }
 
 .social li img:hover {

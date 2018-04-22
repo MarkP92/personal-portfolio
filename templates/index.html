@@ -64,7 +64,20 @@
             <h2>Kontakt</h2>
             <div class="row">
                 <div class="col">
-
+                    <form method="POST">
+                    {% csrf_token %}
+                        {% for error in contact_form.non_field_errors %}
+                            <div class="form-group has-errors text-danger small">
+                                {{ error }}
+                            </div>
+                        {% endfor %}
+                        {% for field in contact_form %}
+                            <div class="form-group">
+                                {{ field }}
+                            </div>
+                        {% endfor %}
+                        <button type="submit" class="btn btn-light">Send</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -76,7 +89,7 @@
             <div class="row">
                 <div class="col">
                 {% for post in post_list %}
-                    <div class="blog-feed card">
+                    <div class="card">
                         {% if post.image %}
                             <img class="card-img-top" src="{{ post.image.url }}" alt="IMAGE NOT FOUND">
                         {% endif %}

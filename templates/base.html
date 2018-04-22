@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load staticfiles %}
+{% load static %}
 <html lang="da">
 <head>
     <!-- GOOGLE VERIFICATION & ANALYTICS -->
@@ -21,23 +21,9 @@
     <meta name="robots" content="index,follow">
     <meta name="google-site-verification" content="verification_token">
     <!-- FACEBOOK OPEN GRAPH -->
-    <meta property="fb:app_id" content="123456789">
-    <meta property="og:url" content="https://mark-petersen.dk">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Mark Petersens Portfolio">
-    <meta property="og:image" content="https://example.com/image.jpg">
-    <meta property="og:description" content="Portfolio og personlig hjemmeside for Mark Petersen">
-    <meta property="og:site_name" content="Mark Petersens Portfolio">
-    <meta property="og:locale" content="da_DK">
-    <meta property="article:author" content="Mark Petersen">
+
     <!-- TWITTER CARD -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@MarkP_DK">
-    <meta name="twitter:creator" content="@MarkP_DK">
-    <meta name="twitter:url" content="https://mark-petersen">
-    <meta name="twitter:title" content="Mark Petersens Portfolio">
-    <meta name="twitter:description" content="Portfolio og personlig hjemmeside for Mark Petersen">
-    <meta name="twitter:image" content="https://example.com/image.jpg">
+
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- CUSTOM CSS -->
@@ -64,7 +50,7 @@
                         <a class="nav-link" href="{% url 'home' %}">Forside</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Om</a>
+                        <a class="nav-link" href="{% url 'about' %}">Om</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'project_list' %}">Projekter</a>
@@ -93,17 +79,16 @@
     <footer>
         <div class="container footer">
             <div class="row">
-                <div class="col"></div>
                 <div class="col">
                     <ul class="social">
-                        <li><a href="https://github.com/MarkP92"><img src="{% static 'img/GH64px.png' %}" alt=""></a></li>
-                        <li><a href="https://facebook.com/Mr.Quid"><img src="{% static 'img/FB72.png' %}" alt=""></a></li>
-                        <li><a href="https://twitter.com/MarkP_DK"><img src="{% static 'img/Twitter.png' %}" alt=""></a></li>
-                        <li><a href="https://stackoverflow.com/users/9548281/markpetersen"><img src="{% static 'img/SO.png' %}" alt=""></a></li>
-                        <li><a href="https://linkedin.com"><img src="{% static 'img/linked66.png' %}" alt=""></a></li>
+                        <li><a href="https://github.com/MarkP92"><img src="{% static 'img/GH64px.png' %}" alt="GitHub"></a></li>
+                        <li><a href="https://facebook.com/Mr.Quid"><img src="{% static 'img/FB72.png' %}" alt="Facebook"></a></li>
+                        <li><a href="https://twitter.com/MarkP_DK"><img src="{% static 'img/Twitter.png' %}" alt="Twitter"></a></li>
+                        <li><a href="https://stackoverflow.com/users/9548281/markpetersen"><img src="{% static 'img/SO.png' %}" alt="StackOverflow"></a></li>
+                        <li><a href="https://linkedin.com"><img src="{% static 'img/linked66.png' %}" alt="LinkedIn"></a></li>
+                        <li><a href="mailto:petersenmark92@gmail.com"><img src="{% static 'img/gmail64px.png' %}" alt="Gmail"></a></li>
                     </ul>
                 </div>
-                <div class="col"></div>
             </div>
         </div>
     </footer>
