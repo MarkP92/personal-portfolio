@@ -74,10 +74,10 @@ h1,h2,h3,h4,h5,h6 {
     padding: 30px;
 }
 
-.projects-section .card {
+/* .projects-section .card {
     width: 80%;
     margin: auto;
-}
+} */
 
 .contact-section {
     padding: 30px;
@@ -118,20 +118,21 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .card {
+    width: 80%;
     padding: 25px;
-    margin: 15px;
-    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 .card-title {
     font-size: 2em;
 }
 
-.blog-feed {
+/* .blog-feed {
     padding: 30px;
-    width: 60%;
+    width: 80%;
     margin: auto;
-}
+} */
 
 .section {
     margin-top: 20px;

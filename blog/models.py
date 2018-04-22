@@ -15,6 +15,8 @@ class Post(models.Model):
 
     class Meta:
         ordering = ['-created_at']
+        verbose_name = 'Indlæg'
+        verbose_name_plural = 'Indlæg'
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
