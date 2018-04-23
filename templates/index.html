@@ -19,7 +19,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2>Om Mark</h2>
+                    <h2 class="section-header"><a href="{% url 'about' %}">Om Mark</a></h2>
                     <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolores quod sint perferendis vero! Ipsam repellat perferendis quis numquam nesciunt cum, iure ut inventore officia suscipit, unde odit eum, fugiat nemo maxime est eaque enim ullam voluptatibus! Commodi similique incidunt perspiciatis accusantium ipsum ullam provident, repellendus voluptates quis, modi adipisci?</p>
                 </div>
             </div>
@@ -34,6 +34,7 @@
                         <li class="skill-item"><img src="{% static 'img/python_icon.png' %}" /></li>
                         <li class="skill-item"><img src="{% static 'img/django_icon.svg' %}" /></li>
                         <li class="skill-item"><img src="{% static 'img/git_icon.png' %}" /></li>
+                        <li class="skill-item"><img src="{% static 'img/wp_icon.png' %}" /></li>
                     </ul>
                 </div>
             </div>
@@ -42,7 +43,7 @@
     <!-- PROJECT SECTION -->
     <section class="projects-section section">
         <div class="container">
-            <h2>Projekter</h2>
+            <h2 class="section-header"><a href="{% url 'project_list' %}">Projekter</a></h2>
             <div class="row">
                 <div class="col">
                     {% for project in project_list %}
@@ -59,7 +60,7 @@
         </div>
     </section>
     <!-- CONTACT SECTION -->
-    <section class="contact-section section">
+    <!-- <section class="contact-section section">
         <div class="cotainer">
             <h2>Kontakt</h2>
             <div class="row">
@@ -81,11 +82,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- BLOG SECTION -->
     <section class="blog-section section">
         <div class="container">
-            <h2>Blog</h2>
+            <h2 class="section-header"><a href="{% url 'post_list' %}">Blog</a></h2>
             <div class="row">
                 <div class="col">
                 {% for post in post_list %}

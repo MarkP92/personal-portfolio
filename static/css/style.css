@@ -81,12 +81,16 @@ h1,h2,h3,h4,h5,h6 {
     padding: 30px;
 }
 
-.contact-section {
+/* .contact-section {
     padding: 30px;
-}
+} */
 
 .blog-section {
     padding: 30px;
+}
+
+.section-header a {
+    text-decoration: none;
 }
 
 .parallax {
