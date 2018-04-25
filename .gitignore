@@ -6,3 +6,9 @@ MyPortfolio/secrets.py
 
 # VSCODE
 .vscode
+
+# .ENV
+.env
+
+# DATABASE
+*.sqlite3
