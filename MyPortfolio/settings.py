@@ -8,7 +8,6 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-# from .secrets import SECRET_KEY
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -23,7 +22,6 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 # SECRET KEY
 
-# secrets.py
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'f=)&d(hhc&++r0a3&b45at6fg9u@ls%d_42gdo%01ss#_^r&9^')
 
 
@@ -31,7 +29,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'f=)&d(hhc&++r0a3&b45at6fg9u@ls
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
 
-ALLOWED_HOSTS = ['mark-petersen.herokuapp.com']
+ALLOWED_HOSTS = ['mark-petersen.herokuapp.com', '127:0:0:1']
 
 
 # Application definition
