@@ -26,15 +26,15 @@
             <div class="row">
                 <div class="col">
                     <ul class="skills">
-                        <li class="skill-item"><img src="{% static 'img/html_icon.png' %}" /></li>
-                        <li class="skill-item"><img src="{% static 'img/css_icon.png' %}" /></li>
-                        <li class="skill-item"><img src="{% static 'img/js_icon.png' %}" /></li>
-                        <li class="skill-item"><img src="{% static 'img/bootstrap_icon.png' %}" /></li>
-                        <li class="skill-item"><img src="{% static 'img/jquery_icon.png' %}" /></li>
-                        <li class="skill-item"><img src="{% static 'img/python_icon.png' %}" /></li>
-                        <li class="skill-item"><img src="{% static 'img/django_icon.svg' %}" /></li>
-                        <li class="skill-item"><img src="{% static 'img/git_icon.png' %}" /></li>
-                        <li class="skill-item"><img src="{% static 'img/wp_icon.png' %}" /></li>
+                        <li class="skill-item"><img src="{% static 'img/html_icon.png' %}" alt="HTML5"/></li>
+                        <li class="skill-item"><img src="{% static 'img/css_icon.png' %}" alt="CSS3"/></li>
+                        <li class="skill-item"><img src="{% static 'img/js_icon.png' %}" alt="JavaScript"/></li>
+                        <li class="skill-item"><img src="{% static 'img/bootstrap_icon.png' %}" alt="Bootstrap 4"/></li>
+                        <li class="skill-item"><img src="{% static 'img/jquery_icon.png' %}" alt="jQuery"/></li>
+                        <li class="skill-item"><img src="{% static 'img/python_icon.png' %}" alt="Python"/></li>
+                        <li class="skill-item"><img src="{% static 'img/django_icon.svg' %}" alt="Django"/></li>
+                        <li class="skill-item"><img src="{% static 'img/git_icon.png' %}" alt="Git"/></li>
+                        <li class="skill-item"><img src="{% static 'img/wp_icon.png' %}" alt="WordPress"/></li>
                     </ul>
                 </div>
             </div>
@@ -48,7 +48,7 @@
                 <div class="col">
                     {% for project in project_list %}
                         <div class="card">
-                            <img class="card-img-top" src="{{ project.image.url }}" alt="IMAGE NOT FOUND">
+                            <img class="card-img-top" src="{{ project.image.url }}" alt="Project Featured Image">
                             <div class="card-body">
                                 <h5 class="card-title"><a href="{% url 'project_detail' slug=project.slug %}">{{ project.title }}</a></h5>
                                 <p class="card-text">{{ project.description|safe }}</p>
@@ -59,30 +59,6 @@
             </div>
         </div>
     </section>
-    <!-- CONTACT SECTION -->
-    <!-- <section class="contact-section section">
-        <div class="cotainer">
-            <h2>Kontakt</h2>
-            <div class="row">
-                <div class="col">
-                    <form method="POST">
-                    {% csrf_token %}
-                        {% for error in contact_form.non_field_errors %}
-                            <div class="form-group has-errors text-danger small">
-                                {{ error }}
-                            </div>
-                        {% endfor %}
-                        {% for field in contact_form %}
-                            <div class="form-group">
-                                {{ field }}
-                            </div>
-                        {% endfor %}
-                        <button type="submit" class="btn btn-light">Send</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section> -->
     <!-- BLOG SECTION -->
     <section class="blog-section section">
         <div class="container">
@@ -92,7 +68,7 @@
                 {% for post in post_list %}
                     <div class="card">
                         {% if post.image %}
-                            <img class="card-img-top" src="{{ post.image.url }}" alt="IMAGE NOT FOUND">
+                            <img class="card-img-top" src="{{ post.image.url }}" alt="Blog Featured Image">
                         {% endif %}
                         <div class="card-body">
                             <h5 class="card-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h5>
