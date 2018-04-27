@@ -1,5 +1,6 @@
 from django import forms
 from django.forms import ModelForm
+from mediumeditor.widgets import MediumEditorTextarea
 from blog.models import Post
 
 class PostForm(forms.ModelForm):
@@ -9,4 +10,4 @@ class PostForm(forms.ModelForm):
         fields = ('author', 'title', 'text')
 
         # Widgets / Classes for CSS
-        widgets = {'title':forms.TextInput(attrs={'class':'textinputclass'}), 'text':forms.Textarea(attrs={'class':'editable medium-editor-textarea postcontent'})}
+        widgets = {'text' : MediumEditorTextarea(),}
