@@ -12,4 +12,3 @@ MyPortfolio/secrets.py
 
 # DATABASE
 *.sqlite3
-MyPortfolio/db.sqlite3
