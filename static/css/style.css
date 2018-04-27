@@ -167,3 +167,7 @@ h1,h2,h3,h4,h5,h6 {
 .social li img:hover {
     transform: scale(1.3);
 }
+
+.active {
+    border-bottom: 1px solid #333;
+}
