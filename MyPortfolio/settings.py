@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'blog',
     'contact',
     'project',
+    'mediumeditor',
 ]
 
 MIDDLEWARE = [
