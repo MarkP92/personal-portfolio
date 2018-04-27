@@ -1,4 +1,3 @@
-'''
 from django import forms
 from django.forms import ModelForm
 from mediumeditor.widgets import MediumEditorTextarea
@@ -12,4 +11,3 @@ class PostForm(forms.ModelForm):
 
         # Widgets / Classes for CSS
         widgets = {'text' : MediumEditorTextarea(),}
-'''

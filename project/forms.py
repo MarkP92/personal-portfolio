@@ -1,4 +1,3 @@
-'''
 from django import forms
 from django.forms import ModelForm
 from mediumeditor.widgets import MediumEditorTextarea
@@ -11,4 +10,3 @@ class ProjectForm(forms.ModelForm):
 
         # Widgets / Classes for CSS
         widgets = {'description' : MediumEditorTextarea(),}
-'''
