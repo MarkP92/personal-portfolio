@@ -25,7 +25,7 @@ DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
 # Base URL and allowed hosts
 BASE_URL = "https://mark-petersen.herokuapp.com"
-ALLOWED_HOSTS = ['mark-petersen.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['mark-petersen.herokuapp.com', '127.0.0.1', '.mark-petersen.dk']
 
 # Application definition
 INSTALLED_APPS = [
@@ -35,11 +35,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mediumeditor',
     'about',
     'blog',
     'contact',
     'project',
-    'mediumeditor',
 ]
 
 MIDDLEWARE = [
@@ -123,7 +123,13 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Email
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_PASSWORD = 'xxxx'
+EMAIL_HOST_USER = 'xxxx@gmail.com'
+EMAIL_PORT = 587
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
