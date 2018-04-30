@@ -55,7 +55,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .inside-jumbo h1 {
     margin-top: 20px;
-    font-size: 8.4vw;
+    font-size: 8vw;
     font-weight: 1000;
     color: rgb(27, 27, 27);
     text-shadow: 1.3px 1.3px #efefef;
@@ -64,8 +64,8 @@ h1,h2,h3,h4,h5,h6 {
 .inside-jumbo p {
     color: #efefef;
     font-size: 1.8vw;
-    font-weight: 1.2rem;
-    text-shadow: 0.5px 0.5px #303030;
+    font-weight: 700;
+    text-shadow: 0.8px 0.8px #303030;
 }
 
 .btn {
@@ -186,7 +186,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /* MEDIA SCREENS */
-@media only screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (orientation:portrait) {
     body {
         font-size: 12px;
     }
@@ -196,29 +196,30 @@ h1,h2,h3,h4,h5,h6 {
     }
 
     .inside-jumbo h1 {
-        font-size: 4em;
-        margin-top: 50px;
+        font-size: 4.4em;
+        /* margin-top: 40px; */
     }
 
     .inside-jumbo p {
-        font-size: 1.4em;
-    }
-
-    .cta {
-        transform: scale(0.7)
+        font-size: 1.5em;
     }
 }
 
-@media only screen and (min-device-width: 560px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
-    .inside-jumbo h1 {
-        margin-top: 5px;
-    }
-
-    .cta {
-        transform: scale(0.7)
+@media only screen and (orientation:landscape) {
+    body {
+        font-size: 14px;
     }
 
     .nav-bg {
         background-color: rgba(239, 239, 239, 0.8);
+    }
+
+    .inside-jumbo h1 {
+        font-size: 3.4em;
+        /* margin-top: 40px; */
+    }
+
+    .inside-jumbo p {
+        font-size: 0.8em;
     }
 }
