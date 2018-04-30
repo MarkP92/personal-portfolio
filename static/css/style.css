@@ -176,8 +176,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .social li img {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 2rem;
     padding: 0.75rem;
 }
 
@@ -186,7 +186,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /* MEDIA SCREENS */
-@media only screen and (max-device-width: 480px), only screen and (min-device-width: 560px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
     body {
         font-size: 12px;
     }
