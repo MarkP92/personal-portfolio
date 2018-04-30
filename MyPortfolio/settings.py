@@ -24,7 +24,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'f=)&d(hhc&++r0a3&b45at6fg9u@ls
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
 # Base URL and allowed hosts
-BASE_URL = "https://mark-petersen.herokuapp.com"
+BASE_URL = "https://www.mark-petersen.dk"
 ALLOWED_HOSTS = ['mark-petersen.herokuapp.com', '127.0.0.1', '.mark-petersen.dk']
 
 # Application definition
