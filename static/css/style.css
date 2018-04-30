@@ -2,76 +2,82 @@ body {
     font-family: 'Montserrat', 'Raleway', 'Anton', sans-serif;
     font-size: 1em;
     color: rgb(51, 51, 51);
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.7;
     overflow-x: hidden;
-    background-color: #eee;
+    background-color: #efefef;
 }
 
 body p {
     font-family: 'Raleway', 'Anton', 'Montserrat', sans-serif;
-    color: rgb(51, 51, 51);
+    color: #565656;
     line-height: 1.7;
 }
 
 body a {
-    color: #333;
+    color: #303030;
     line-height: 1.4;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 h1,h2,h3,h4,h5,h6 {
-    color: #333;
-    line-height: 1.4;
+    color: #303030;
+    line-height: 1.8;
+    font-weight: 2rem;
 }
 
 .nav-bg {
-    background: rgba(240, 240, 240, 0.8);
+    /* background: rgba(239, 239, 239, 0.2);
+    box-shadow: 0.4px 0.4px #efefef; */
+    font-weight: 1000;
+    color: #ff3b3f;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: rgba(0,0,0,.6);
+    color: rgba(48, 48, 48, .8);
+}
+
+.active {
+    border-bottom: 0.4px solid #ff3b3f;
 }
 
 .hero-section {
-    background-image: url(../img/new_hero_compr.jpg);
+    background: linear-gradient(#caebf2, transparent 80%), linear-gradient(0deg, #efefef, transparent 3%), url(../img/new_hero_compr.jpg);
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 95vh;
     width: 100%;
 }
 
-.inside-jumbo {
-    margin-top: 125px;
-}
-
 .inside-jumbo h1 {
-    font-size: 8vw;
+    font-size: 8.4vw;
     font-weight: 1000;
-    color: #eee;
-    text-shadow: 1px 1px black;
+    color: rgb(27, 27, 27);
+    text-shadow: 1.3px 1.3px #efefef;
 }
 
 .inside-jumbo p {
-    font-size: 1.2em;
-    font-weight: 300;
-    color: #eee;
-    text-shadow: 0.5px 0.5px black;
+    color: #efefef;
+    font-size: 1.8vw;
+    font-weight: 1.2rem;
+    text-shadow: 0.5px 0.5px #303030;
 }
 
-.cta {
-    margin-bottom: 50px;
+.btn {
+    background-color: #ff3b3f;
+    border: 0.1em solid #ff3b3f;
+    color: #efefef;
 }
 
 .main-content {
     width: 100%;
     margin: auto;
-    margin-top: 80px;
-    margin-bottom: 50px;
+    margin-top: 75px;
+    margin-bottom: 15px;
 }
 
 .main-content h2 {
     font-weight: 1000;
-    font-size: 2.4em;
+    font-size: 2.7em;
 }
 
 .section {
@@ -85,7 +91,7 @@ h1,h2,h3,h4,h5,h6 {
 .parallax {
     background-position: center center;
     background-size: cover;
-    background-attachment: fixed!important;
+    /* background-attachment: fixed!important; */
     overflow: hidden;
 }
 
@@ -101,23 +107,23 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .post-list-item {
-    padding-bottom: 25px;
+    padding: 1.25rem;
 }
 
 .post-content {
-    padding-top: 10px;
+    padding: 1.25rem;
 }
 
 .post-image {
-    width: 300px;
-    height: 150px;
+    width: 250px;
+    height: 125;
 }
 
 .card {
-    padding: 5px;
+    padding: 1.25rem;
     margin: auto;
-    margin-bottom: 15px;
     width: 100%;
+    margin-bottom: 1.25rem;
 }
 
 .card-title {
@@ -144,7 +150,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .about-text {
     margin: auto;
-    padding: 15px;
+    padding: 1.25rem;
 }
 
 .social {
@@ -159,15 +165,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .social li img {
-    width: 40px;
-    height: 40px;
-    padding: 5px;
+    width: 4rem;
+    height: 4rem;
+    padding: 0.75rem;
 }
 
 .social li img:hover {
     transform: scale(1.3);
 }
 
-.active {
-    border-bottom: 1px solid #333;
-}
