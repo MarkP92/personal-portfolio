@@ -7,7 +7,7 @@
             <p>Skrevet af: {{ post.author }}</p>
         </div>
     {% if post.image %}
-        <img class="post-image" src="{{ post.image.url }}" alt="post_image">
+        <img class="post-image" src="{{ post.image.url }}" alt="post image">
     {% endif %}
     <p class="post-content">{{ post.text|safe|linebreaksbr }}</p>
 {% endblock %}
