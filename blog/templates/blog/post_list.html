@@ -2,7 +2,7 @@
 
 {% block content %}
     {% for post in post_list %}
-        <div class="blog-feed card">
+        <div class="card blog-card">
             {% if post.image %}
                 <img class="card-img-top" src="{{ post.image.url }}" alt="IMAGE NOT FOUND">
             {% endif %}

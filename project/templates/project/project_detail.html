@@ -1,7 +1,7 @@
 {% extends 'project/project_base.html' %}
 
 {% block content %}
-    <div class="card">
+    <div class="card project-card">
         {% if project.image %}
             <img class="card-img-top" src="{{ project.image.url }}" alt="IMAGE NOT FOUND">
         {% endif %}
