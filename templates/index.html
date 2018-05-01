@@ -42,20 +42,21 @@
     </section>
     <!-- PROJECT SECTION -->
     <section class="projects-section section">
-        <div class="container">
+        <div class="container-fluid">
             <h2 class="section-header"><a href="{% url 'project_list' %}">Projekter</a></h2>
             <div class="row">
-                <div class="col">
-                    {% for project in project_list %}
-                        <div class="card">
+                {% for project in project_list %}
+                    <div class="col-lg-4 col-sm-12">
+                        <div class="card project-card">
                             <img class="card-img-top" src="{{ project.image.url }}" alt="Project Featured Image">
                             <div class="card-body">
                                 <h5 class="card-title"><a href="{% url 'project_detail' slug=project.slug %}">{{ project.title }}</a></h5>
                                 <p class="card-text">{{ project.description|safe }}</p>
+                                <a href="{% url 'project_detail' slug=project.slug %}" class="btn btn-primary">Se projekt</a>
                             </div>
-                        </div>
-                    {% endfor %}
-                </div>
+                        </div>  
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -66,7 +67,7 @@
             <div class="row">
                 <div class="col">
                 {% for post in post_list %}
-                    <div class="card">
+                    <div class="card blog-card">
                         {% if post.image %}
                             <img class="card-img-top" src="{{ post.image.url }}" alt="Blog Featured Image">
                         {% endif %}

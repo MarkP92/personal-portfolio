@@ -29,7 +29,7 @@
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat|Raleway|Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat|Raleway" rel="stylesheet">
     <!-- ICONS -->
     <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
     {% block title %}<title>Mark Petersens Portfolio</title>{% endblock %}
@@ -37,7 +37,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top nav-bg-mobile">
             <a class="navbar-brand" href="{% url 'home' %}">Mark Petersen</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -67,10 +67,9 @@
     {% block hero %}
     {% endblock %}
 
-    <div class="container main-content text-center">
-        <div class="col-xs-auto">
+    <div class="container-fluid main-content text-center">
+        <div class="col-xs-auto col-lg-auto">
             {% block content %}
-
             {% endblock %}
         </div>
     </div>

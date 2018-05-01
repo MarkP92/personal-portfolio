@@ -100,12 +100,12 @@ h1,h2,h3,h4,h5,h6 {
     padding: 1.25rem;
 }
 
-/* .parallax {
-    background-position: center center;
-    background: cover;
-    background-attachment: fixed!important;
-    overflow: hidden;
-} */
+/* PROJECT SECTION */ 
+.projects-section {
+    /* background: #caebf2; */
+    width: 100%;
+    margin: auto;
+}
 
 /* SKILL ICON LIST */ 
 .skills {
@@ -186,6 +186,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /* MEDIA SCREENS */
+@media screen and (max-width: 1025px) {
+    .nav-bg-mobile {
+        background: rgba(239, 239, 239, 0.7)
+    }
+}
 
 /* SMALL > MEDIUM PORTRAIT */
 @media screen and (min-width: 315px) and (max-width: 375px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2) {
