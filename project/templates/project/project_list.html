@@ -2,24 +2,28 @@
 
 {% block content %}
 <div class="container">
-    <h1 class="display-3">PROJEKTER</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="display-4">PROJEKTER</h1>
+        </div>
+    </div> 
     <div class="row">
         <div class="card-deck">
             {% for project in project_list %}
-                <div class="col-md-4">
-                    <div class="card mb-3">
-                        {% if project.image %}
-                            <img class="card-img-top" src="{{ project.image.url }}" alt="IMAGE NOT FOUND">
-                        {% endif %}
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="{% url 'project_detail' slug=project.slug %}">{{ project.title }}</a></h5>
-                            <p class="card-text">{{ project.description|safe|truncatewords:10 }}</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Opdateret den {{ project.created_at }}</small>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="card mb-3">
+                            {% if project.image %}
+                                <img class="card-img-top" src="{{ project.image.url }}" alt="IMAGE NOT FOUND">
+                            {% endif %}
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="{% url 'project_detail' slug=project.slug %}">{{ project.title }}</a></h5>
+                                <p class="card-text">{{ project.description|safe|truncatewords:10 }}</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Opdateret den {{ project.created_at }}</small>
+                            </div>
                         </div>
                     </div>
-                </div>
             {% endfor %}
         </div>
     </div>

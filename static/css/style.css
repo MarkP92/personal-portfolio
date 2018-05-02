@@ -196,7 +196,7 @@ h1,h2,h3,h4,h5,h6 {
 /* SMALL > MEDIUM PORTRAIT */
 @media screen and (min-width: 315px) and (max-width: 375px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2) {
     body {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .inside-jumbo h1 {
