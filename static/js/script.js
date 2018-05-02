@@ -25,6 +25,7 @@ $(window).scroll(function () {
 
     if ($(window).scrollTop() >= triggerHeight) {
         $('#about-section').css('visibility', 'visible').hide().fadeIn();
+        $('.skills').css('visibility', 'visible').hide().fadeIn(2500);
         $(this).off('scroll');
     }
 });
