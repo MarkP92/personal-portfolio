@@ -45,19 +45,23 @@
     <section class="section" id="project-section">
         <div class="container-fluid">
             <div class="container">
-                <h2 class="section-header">PROJEKTER</h2>
+                <h2 class="section-header">NYE PROJEKTER</h2>
                 <div class="row">
-                    {% for project in project_list %}
-                        <div class="col-lg-4 col-sm-12">
-                            <div class="card project-card">
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="{% url 'project_detail' slug=project.slug %}">{{ project.title }}</a></h5>
-                                    <p class="card-text">{{ project.description|safe|truncatewords:10 }}</p>
-                                    <a href="{% url 'project_detail' slug=project.slug %}" class="btn btn-outline-dark">Se projekt</a>
+                    <div class="card-deck">
+                        {% for project in project_list %}
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><a href="{% url 'project_detail' slug=project.slug %}">{{ project.title }}</a></h5>
+                                        <p class="card-text">{{ project.description|safe|truncatewords:10 }}</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted">Opdateret den {{ project.created_at }}</small>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    {% endfor %}
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>

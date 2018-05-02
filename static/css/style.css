@@ -84,14 +84,12 @@ h1,h2,h3,h4,h5,h6 {
 
 /* MAIN CONTENT */
 .main-content {
-    /* margin: auto; */
     margin-top: 60px;
     margin-bottom: 15px;
 }
 
 .main-content h2 {
     font-weight: 800;
-    /* font-size: 2.7em; */
 }
 
 .section {
@@ -101,7 +99,6 @@ h1,h2,h3,h4,h5,h6 {
 .section-header a {
     text-decoration: none;
     font-weight: 1000;
-
 }
 
 /* ABOUT SECTION */ 
@@ -158,20 +155,10 @@ h1,h2,h3,h4,h5,h6 {
     padding: 1.25rem;
 }
 
-.post-image {
-    width: 250px;
-    height: 125;
-}
-
 /* CARDS */
 .card {
-    /* padding: 1.50rem; */
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
 }
-
-/* .card-title {
-    font-size: 1.4em;
-} */
 
 .card-title a {
     text-decoration: none;
