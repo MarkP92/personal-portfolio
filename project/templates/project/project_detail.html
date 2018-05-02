@@ -1,19 +1,26 @@
 {% extends 'project/project_base.html' %}
 
 {% block content %}
-    <div class="card project-card">
-        {% if project.image %}
-            <img class="card-img-top" src="{{ project.image.url }}" alt="IMAGE NOT FOUND">
-        {% endif %}
-        <div class="card-body">
-            <h5 class="card-title">{{ project.title }}</h5>
-            <p class="card-text">{{ project.description|safe }}</p>
-            {% if project.website %}
-                <a href="{{ project.website }}"><button class="btn btn-outline-dark">Website</button></a>
-            {% endif %}
-            {% if project.github %}
-                <a href="{{ project.github }}"><button class="btn btn-outline-dark">GitHub</button></a>
-            {% endif %}
+    <div class="container">
+            <h1 class="display-3">{{ project.title }}</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card project-card">
+                    {% if project.image %}
+                        <img class="card-img-top" src="{{ project.image.url }}" alt="IMAGE NOT FOUND">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ project.title }}</h5>
+                        <p class="card-text">{{ project.description|safe }}</p>
+                        {% if project.website %}
+                            <a href="{{ project.website }}"><button class="btn btn-outline-dark">Website</button></a>
+                        {% endif %}
+                        {% if project.github %}
+                            <a href="{{ project.github }}"><button class="btn btn-outline-dark">GitHub</button></a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}

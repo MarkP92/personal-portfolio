@@ -1,16 +1,20 @@
 /* GLOBAL */
+html {
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
 body {
-    font-family: 'Montserrat', 'Raleway', 'Anton', sans-serif;
-    font-size: 20px;
+    /* font-family: 'Montserrat', 'Raleway', 'Anton', sans-serif; */
     color: rgb(51, 51, 51);
     font-weight: 400;
     line-height: 1.5;
-    overflow-x: hidden;
     background-color: #efefef;
+    display: block;
 }
 
 body p {
-    font-family: 'Raleway', 'Anton', 'Montserrat', sans-serif;
+    /* font-family: 'Raleway', 'Anton', 'Montserrat', sans-serif; */
     color: #565656;
     line-height: 1.5;
     font-size: 1em;
@@ -19,14 +23,18 @@ body p {
 body a {
     color: #303030;
     line-height: 1.4;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1em;
 }
 
 h1,h2,h3,h4,h5,h6 {
     color: #303030;
     line-height: 1.4;
-    font-weight: 700;
+    font-weight: 600;
+}
+
+.container-fluid {
+    padding: 0px;
 }
 
 /* NAVBAR */
@@ -55,7 +63,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .inside-jumbo h1 {
     margin-top: 20px;
-    font-size: 8vw;
+    font-size: 5em;
     font-weight: 1000;
     color: rgb(27, 27, 27);
     text-shadow: 1.3px 1.3px #efefef;
@@ -63,28 +71,27 @@ h1,h2,h3,h4,h5,h6 {
 
 .inside-jumbo p {
     color: #efefef;
-    font-size: 1.8vw;
+    font-size: 1em;
     font-weight: 700;
     text-shadow: 0.8px 0.8px #303030;
 }
 
 .btn {
-    background-color: #ff3b3f;
-    border: 0.1em solid #ff3b3f;
+    background-color: rgba(255, 59, 63, 0.7);
+    border: none;
     color: #efefef;
 }
 
 /* MAIN CONTENT */
 .main-content {
-    width: 100%;
-    margin: auto;
+    /* margin: auto; */
     margin-top: 60px;
     margin-bottom: 15px;
 }
 
 .main-content h2 {
-    font-weight: 1000;
-    font-size: 2.7em;
+    font-weight: 800;
+    /* font-size: 2.7em; */
 }
 
 .section {
@@ -93,18 +100,23 @@ h1,h2,h3,h4,h5,h6 {
 
 .section-header a {
     text-decoration: none;
+    font-weight: 1000;
+
 }
 
+/* ABOUT SECTION */ 
 .about-text {
     margin: auto;
     padding: 1.25rem;
 }
 
 /* PROJECT SECTION */ 
-.projects-section {
-    /* background: #caebf2; */
+#project-section {
+    background: #caebf2;
     width: 100%;
-    margin: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 100%;
 }
 
 /* SKILL ICON LIST */ 
@@ -112,7 +124,7 @@ h1,h2,h3,h4,h5,h6 {
     list-style-type: none;
     font-size: 1.2em;
     margin: auto;
-    padding: 0px;
+    padding: 25px;
 }
 
 .skill-item {
@@ -153,13 +165,16 @@ h1,h2,h3,h4,h5,h6 {
 
 /* CARDS */
 .card {
-    padding: 1.25rem;
-    margin: auto;
-    margin-bottom: 1.25rem;
+    /* padding: 1.50rem; */
+    margin-bottom: 1rem;
 }
 
-.card-title {
-    font-size: 2em;
+/* .card-title {
+    font-size: 1.4em;
+} */
+
+.card-title a {
+    text-decoration: none;
 }
 
 /* SOCIAL LINKS */

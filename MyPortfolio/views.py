@@ -11,6 +11,6 @@ class HomePage(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(HomePage, self).get_context_data(**kwargs)
-        context.update({'post_list' : Post.objects.filter(published_at__lte=timezone.now()).order_by('-created_at')[:3], 'project_list' : Project.objects.order_by('-created_at')[:2], 'contact_form' : ContactForm})
+        context.update({'post_list' : Post.objects.filter(published_at__lte=timezone.now()).order_by('-created_at')[:3], 'project_list' : Project.objects.order_by('-created_at')[:3], 'contact_form' : ContactForm})
         return context
     

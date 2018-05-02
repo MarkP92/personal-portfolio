@@ -1,14 +1,17 @@
 {% extends 'blog/blog_base.html' %}
 
 {% block content %}
-    <h1 class="post-title">{{ post.title }}</h1>
-        <div class="date post author">
-            {{ post.published_at }}
-            <p>Skrevet af: {{ post.author }}</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="post-title">{{ post.title }}</h1>
+                    <p class="date post author">{{ post.published_at }}</p>
+                {% if post.image %}
+                    <img class="post-image" src="{{ post.image.url }}" alt="post image">
+                {% endif %}
+                <p class="post-content">{{ post.text|safe|linebreaksbr }}</p>
+            </div>
         </div>
-    {% if post.image %}
-        <img class="post-image" src="{{ post.image.url }}" alt="post image">
-    {% endif %}
-    <p class="post-content">{{ post.text|safe|linebreaksbr }}</p>
+    </div>
 {% endblock %}
 

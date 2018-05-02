@@ -1,16 +1,23 @@
 {% extends 'project/project_base.html' %}
 
 {% block content %}
-    {% for project in project_list %}
-        <div class="card project-card">
-            {% if project.image %}
-                <img class="card-img-top" src="{{ project.image.url }}" alt="IMAGE NOT FOUND">
-            {% endif %}
-            <div class="card-body">
-                <h5 class="card-title"><a href="{% url 'project_detail' slug=project.slug %}">{{ project.title }}</a></h5>
-                <p class="card-text">{{ project.description|safe }}</p>
+<div class="container">
+    <h1 class="display-3">PROJEKTER</h1>
+    <div class="row">
+        {% for project in project_list %}
+            <div class="col-lg-4 col-sm-12">
+                <div class="card project-card">
+                    {% if project.image %}
+                        <img class="card-img-top" src="{{ project.image.url }}" alt="IMAGE NOT FOUND">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="{% url 'project_detail' slug=project.slug %}">{{ project.title }}</a></h5>
+                        <p class="card-text">{{ project.description|safe|truncatewords:10 }}</p>
+                        <a href="{% url 'project_detail' slug=project.slug %}" class="btn btn-outline-dark">Se projekt</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-    {% endfor %}
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

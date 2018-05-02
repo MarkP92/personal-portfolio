@@ -15,16 +15,17 @@
 <!-- MAIN CONTENT -->
 {% block content %}
     <!-- ABOUT SECTION -->
-    <section class="about-section section">
+    <section class="section" id="about-section">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <h2 class="section-header"><a href="{% url 'about' %}">Om Mark</a></h2>
+                <div class="col-md-12">
+                    <h2 class="section-header">OM MIG</h2>
                     <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolores quod sint perferendis vero! Ipsam repellat perferendis quis numquam nesciunt cum, iure ut inventore officia suscipit, unde odit eum, fugiat nemo maxime est eaque enim ullam voluptatibus! Commodi similique incidunt perspiciatis accusantium ipsum ullam provident, repellendus voluptates quis, modi adipisci?</p>
+                    <a href="{% url 'about' %}" class="btn btn-outline-dark">Læs mere</a>
                 </div>
             </div>
             <div class="row">
-                <div class="col">
+                <div class="col-md-12">
                     <ul class="skills">
                         <li class="skill-item"><img src="{% static 'img/html_icon.png' %}" alt="HTML5"/></li>
                         <li class="skill-item"><img src="{% static 'img/css_icon.png' %}" alt="CSS3"/></li>
@@ -41,43 +42,46 @@
         </div>
     </section>
     <!-- PROJECT SECTION -->
-    <section class="projects-section section">
+    <section class="section" id="project-section">
         <div class="container-fluid">
-            <h2 class="section-header"><a href="{% url 'project_list' %}">Projekter</a></h2>
-            <div class="row">
-                {% for project in project_list %}
-                    <div class="col-lg-4 col-sm-12">
-                        <div class="card project-card">
-                            <div class="card-body">
-                                <h5 class="card-title"><a href="{% url 'project_detail' slug=project.slug %}">{{ project.title }}</a></h5>
-                                <p class="card-text">{{ project.description|safe }}</p>
-                                <a href="{% url 'project_detail' slug=project.slug %}" class="btn btn-primary">Se projekt</a>
+            <div class="container">
+                <h2 class="section-header">PROJEKTER</h2>
+                <div class="row">
+                    {% for project in project_list %}
+                        <div class="col-lg-4 col-sm-12">
+                            <div class="card project-card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="{% url 'project_detail' slug=project.slug %}">{{ project.title }}</a></h5>
+                                    <p class="card-text">{{ project.description|safe|truncatewords:10 }}</p>
+                                    <a href="{% url 'project_detail' slug=project.slug %}" class="btn btn-outline-dark">Se projekt</a>
+                                </div>
                             </div>
-                        </div>  
-                    </div>
-                {% endfor %}
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </section>
     <!-- BLOG SECTION -->
-    <section class="blog-section section">
+    <section class="section" id="blog-section">
         <div class="container">
-            <h2 class="section-header"><a href="{% url 'post_list' %}">Blog</a></h2>
+            <h2 class="section-header">SENESTE INDLÆG</h2>
             <div class="row">
-                <div class="col">
                 {% for post in post_list %}
-                    <div class="card blog-card">
-                        {% if post.image %}
-                            <img class="card-img-top" src="{{ post.image.url }}" alt="Blog Featured Image">
-                        {% endif %}
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h5>
-                            <p class="card-text">{{ post.author }}<br>
-                            {{ post.created_at }}</p>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card blog-card">
+                            {% if post.image %}
+                                <img class="card-img-top" src="{{ post.image.url }}" alt="Blog Featured Image">
+                            {% endif %}
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h5>
+                                <p class="card-text">{{ post.created_at }}
+                                {{ post.text|safe|truncatewords:10 }}</p>
+                                <a href="{% url 'post_detail' slug=post.slug %}" class="btn btn-outline-dark">Læs mere</a>
+                            </div>
                         </div>
                     </div>
                 {% endfor %}
-                </div>
             </div>
         </div>
     </section>

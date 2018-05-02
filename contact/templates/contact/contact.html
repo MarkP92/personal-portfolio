@@ -1,20 +1,28 @@
 {% extends 'contact/contact_base.html' %}
 {% block content %}
-    <div class="container col-md-6">
-        <h1>Kontakt</h1>
-        <form method="POST">
-        {% csrf_token %}
-            {% for error in form.non_field_errors %}
-                <div class="form-group has-errors text-danger small">
-                    {{ error }}
-                </div>
-            {% endfor %}
-            {% for field in form %}
-                <div class="form-group">
-                    {{ field }}
-                </div>
-            {% endfor %}
-            <button type="submit" class="btn btn-light">Send</button>
-        </form>
+    <div class="container">
+            <h1 class="display-3">KONTAKT</h1>
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <form method="POST">
+                {% csrf_token %}
+                    {% for error in form.non_field_errors %}
+                        <div class="form-group has-errors text-danger small">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                    {% for field in form %}
+                        <div class="form-group">
+                            {{ field }}
+                        </div>
+                    {% endfor %}
+                    <button type="submit" class="btn btn-light">Send</button>
+                </form>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
     </div>
 {% endblock %}
