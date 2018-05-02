@@ -14,4 +14,19 @@ $(document).ready(function() {
     $('a[href="' + location.pathname + '"]').closest('li').addClass('active'); 
 });
 
+// FADE IN ANIMATION FOR ABOUT SECTION
+$(window).scroll(function () {
+    console.log($(window).scrollTop());
+    var topDivHeight = $(".hero-section").height();
+    var viewPortSize = $(window).height();
+    
+    var triggerAt = 300;
+    var triggerHeight = (topDivHeight - viewPortSize) + triggerAt;
+
+    if ($(window).scrollTop() >= triggerHeight) {
+        $('#about-section').css('visibility', 'visible').hide().fadeIn();
+        $(this).off('scroll');
+    }
+});
+
 
