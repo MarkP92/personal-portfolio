@@ -11,6 +11,8 @@ class StaticSiteMap(Sitemap):
             'about',
             'contact',
             'send',
+            'project_list',
+            'post_list',
         ]
  
     def location(self, item):

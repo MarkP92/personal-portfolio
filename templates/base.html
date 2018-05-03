@@ -20,6 +20,8 @@
     <meta name="description" content="Portfolio og personlig hjemmeside for Mark Petersen">
     <meta name="robots" content="index,follow">
     <meta name="google-site-verification" content="verification_token">
+    <!-- CANONICAL URL -->
+    <link rel="canonical" href="https://www.mark-petersen.dk{{ request.get_full_path }}">
     <!-- FACEBOOK OPEN GRAPH -->
 
     <!-- TWITTER CARD -->
@@ -29,9 +31,7 @@
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat|Raleway" rel="stylesheet">
     <!-- ICONS -->
-    <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
     <title>Mark Petersens Portfolio | {% block title %}{% endblock %}</title>
     {{ form.media }}
 </head>
