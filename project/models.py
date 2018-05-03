@@ -7,7 +7,7 @@ import PIL
 class Project(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
-    tech = models.CharField(max_length=150, default='')
+    tech = models.CharField(max_length=150, default='', blank=True, null=True)
     image = models.ImageField(upload_to='../media/img', blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     website = models.URLField(max_length=120, default='', blank=True, null=True)
