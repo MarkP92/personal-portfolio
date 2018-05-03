@@ -18,7 +18,9 @@
                             <div class="card-body">
                                 <h5 class="card-title"><a href="{% url 'project_detail' slug=project.slug %}">{{ project.title }}</a></h5>
                                 <p class="card-text">{{ project.description|safe|truncatewords:5 }}</p>
-                                <p class="card-text text-muted"><b>Teknologier:</b> {{ project.tech|safe }}</p>
+                                {% if project.tech %}
+                                    <p class="card-text text-muted"><b>Teknologier:</b> {{ project.tech|safe }}</p>
+                                {% endif %}
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">Opdateret den {{ project.created_at }}</small>

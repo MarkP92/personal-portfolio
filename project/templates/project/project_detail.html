@@ -12,7 +12,9 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ project.title }}</h5>
                         <p class="card-text">{{ project.description|safe }}</p>
-                        <p class="card-text text-muted"><b>Teknologier:</b> {{ project.tech|safe }}</p>
+                        {% if project.tech %}
+                            <p class="card-text text-muted"><b>Teknologier:</b> {{ project.tech|safe }}</p>
+                        {% endif %}
                         {% if project.website %}
                             <a href="{{ project.website }}"><button class="btn btn-outline-dark">Website</button></a>
                         {% endif %}
