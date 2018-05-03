@@ -7,7 +7,7 @@
             <div class="inside-jumbo">
                 <h1 class="display-3">Mark<br>Petersen</h1>
                 <p class="lead">Hej, verden! Velkommen til mit online portfolio.<br>Mit navn er Mark, jeg er 25 år og selvlært Webudvikler.<br>Jeg brænder for at kode og designe flotte hjemmesider.</p>
-                <a class="btn btn-primary cta" href="{% url 'project_list' %}" role="button">Projekter &raquo;</a>
+                <a class="btn btn-primary" id="cta" href="{% url 'project_list' %}" role="button">Projekter &raquo;</a>
             </div>
         </div>
     </div>
@@ -21,7 +21,7 @@
                 <div class="col-md-12">
                     <h2 class="section-header">OM MIG</h2>
                     <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolores quod sint perferendis vero! Ipsam repellat perferendis quis numquam nesciunt cum, iure ut inventore officia suscipit, unde odit eum, fugiat nemo maxime est eaque enim ullam voluptatibus! Commodi similique incidunt perspiciatis accusantium ipsum ullam provident, repellendus voluptates quis, modi adipisci?</p>
-                    <a href="{% url 'about' %}" class="btn btn-outline-dark">Læs mere</a>
+                    <a href="{% url 'about' %}" class="btn btn-outline-light">Læs mere</a>
                 </div>
             </div>
             <div class="row">
@@ -79,9 +79,9 @@
                             {% endif %}
                             <div class="card-body">
                                 <h5 class="card-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h5>
-                                <p class="card-text">{{ post.created_at }}
-                                {{ post.text|safe|truncatewords:10 }}</p>
-                                <a href="{% url 'post_detail' slug=post.slug %}" class="btn btn-outline-dark">Læs mere</a>
+                                <p class="text-muted">{{ post.created_at }}</p>
+                                <p class="card-text">{{ post.text|safe|truncatewords:10 }}</p>
+                                <a href="{% url 'post_detail' slug=post.slug %}" class="btn btn-outline-light">Læs mere</a>
                             </div>
                         </div>
                     </div>

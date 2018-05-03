@@ -1,5 +1,5 @@
 {% extends 'project/project_base.html' %}
-
+{% block title %}Projekter{% endblock %}
 {% block content %}
 <div class="container">
     <div class="row">
@@ -17,7 +17,8 @@
                             {% endif %}
                             <div class="card-body">
                                 <h5 class="card-title"><a href="{% url 'project_detail' slug=project.slug %}">{{ project.title }}</a></h5>
-                                <p class="card-text">{{ project.description|safe|truncatewords:10 }}</p>
+                                <p class="card-text">{{ project.description|safe|truncatewords:5 }}</p>
+                                <p class="card-text text-muted"><b>Teknologier:</b> {{ project.tech|safe }}</p>
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">Opdateret den {{ project.created_at }}</small>
