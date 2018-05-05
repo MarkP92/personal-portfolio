@@ -1,10 +1,10 @@
-// FIXED MENU AFTER SCROLL
+// FIXED MENU BG AFTER SCROLL
 $(window).scroll(function(){
     if ($(window).scrollTop() >= 700) {
-       $('nav').addClass('nav-bg');
+       $('#menu').addClass('nav-scroll-bg');
     }
     else {
-       $('nav').removeClass('nav-bg');
+       $('#menu').removeClass('nav-scroll-bg');
     }
 });
 
@@ -20,14 +20,13 @@ $(window).scroll(function () {
     var topDivHeight = $(".hero-section").height();
     var viewPortSize = $(window).height();
     
-    var triggerAt = 300;
+    var triggerAt = 400;
     var triggerHeight = (topDivHeight - viewPortSize) + triggerAt;
 
     if ($(window).scrollTop() >= triggerHeight) {
-        $('#about-section').css('visibility', 'visible').hide().fadeIn();
+        $('#about-text').css('visibility', 'visible').hide().fadeIn();
         $('.skills').css('visibility', 'visible').hide().fadeIn(2500);
         $(this).off('scroll');
     }
 });
-
 

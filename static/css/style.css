@@ -5,7 +5,6 @@ html {
 }
 
 body {
-    /* font-family: 'Montserrat', 'Raleway', 'Anton', sans-serif; */
     color: rgb(51, 51, 51);
     font-weight: 400;
     line-height: 1.5;
@@ -14,7 +13,6 @@ body {
 }
 
 body p {
-    /* font-family: 'Raleway', 'Anton', 'Montserrat', sans-serif; */
     color: #565656;
     line-height: 1.5;
     font-size: 1em;
@@ -37,9 +35,81 @@ h1,h2,h3,h4,h5,h6 {
     padding: 0px;
 }
 
+/* MEDIA SCREENS */
+@media screen and (max-width: 1025px) {
+    #menu {
+        background: rgba(239, 239, 239, 0.7)
+    }
+
+    .active {
+        color: rgba(48, 48, 48, 1);
+        border: none!important; 
+    }
+}
+
+/* SMALL > MEDIUM PORTRAIT */
+@media screen and (min-width: 315px) and (max-width: 375px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        font-size: 12px;
+    }
+
+    .inside-jumbo h1 {
+        font-size: 9.8vh;
+    }
+
+    .inside-jumbo p {
+        font-size: 2.7vh;
+    }
+}
+
+/* MEDIUM > LARGE PORTRAIT */
+@media screen and (min-width: 376px) and (max-width: 1025px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        font-size: 14px;
+    }
+
+    .inside-jumbo h1 {
+        font-size: 11vh;
+    }
+
+    .inside-jumbo p {
+        font-size: 3.1vh;
+    }
+}
+
+/* SMALL > MEDIUM LANDSCAPE */
+@media screen and (min-width: 565px) and (max-width: 670px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        font-size: 14px;
+    }
+
+    .inside-jumbo h1 {
+        font-size: 8vw;
+    }
+
+    .inside-jumbo p {
+        font-size: 1.9vw;
+    }
+}
+
+/* MEDIUM > LARGE LANDSCAPE*/
+@media screen and (min-width: 735px) and (max-width: 1370px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        font-size: 14px;
+    }
+
+    .inside-jumbo h1 {
+        font-size: 6.8vw;
+    }
+
+    .inside-jumbo p {
+        font-size: 1.7vw;
+    }
+}
+
 /* NAVBAR */
-.nav-bg {
-    background: rgba(239, 239, 239, 0.4)
+.nav-scroll-bg {
+    background: rgba(239, 239, 239, 0.5)
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -102,7 +172,7 @@ h1,h2,h3,h4,h5,h6 {
 /* MAIN CONTENT */
 .main-content {
     margin-top: 60px;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 
 .main-content h2 {
@@ -119,12 +189,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /* ABOUT SECTION */ 
-.about-text {
+#about-section {
     margin: auto;
     padding: 1.25rem;
 }
 
-#about-section {
+#about-text {
     visibility: hidden;
 }
 
@@ -135,6 +205,23 @@ h1,h2,h3,h4,h5,h6 {
     padding-left: 0px;
     padding-right: 0px;
     height: 100%;
+}
+
+/* BLOG SECTION */
+#blog-section {
+    background: #ff3b3f;
+}
+
+.post-list-item {
+    padding: 1.25rem;
+}
+
+.post-content {
+    padding: 1.25rem;
+}
+
+#blog-head {
+    color: #f8f9fa;
 }
 
 /* SKILL ICON LIST */ 
@@ -167,15 +254,6 @@ h1,h2,h3,h4,h5,h6 {
     transform: scale(1.5);
 }
 
-/* BLOG CONTENT */
-.post-list-item {
-    padding: 1.25rem;
-}
-
-.post-content {
-    padding: 1.25rem;
-}
-
 /* CARDS */
 .card {
     margin-bottom: 10px;
@@ -185,12 +263,19 @@ h1,h2,h3,h4,h5,h6 {
     text-decoration: none;
 }
 
+/* FOOTER */
+.footer {
+    background: rgba(115, 108, 108, 0.4);
+    height: 100%;
+}
+
 /* SOCIAL LINKS */
 .social {
     margin: auto;
     list-style-type: none;
     text-align: center;
-    padding: 0;
+    padding-top: 35px;
+    -webkit-padding-start: 0px!important;
 }
 
 .social li {
@@ -198,8 +283,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .social li img {
-    width: 3rem;
-    height: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
     padding: 0.75rem;
 }
 
@@ -207,69 +292,6 @@ h1,h2,h3,h4,h5,h6 {
     transform: scale(1.3);
 }
 
-/* MEDIA SCREENS */
-@media screen and (max-width: 1025px) {
-    .nav-bg-mobile {
-        background: rgba(239, 239, 239, 0.7)
-    }
-}
-
-/* SMALL > MEDIUM PORTRAIT */
-@media screen and (min-width: 315px) and (max-width: 375px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2) {
-    body {
-        font-size: 12px;
-    }
-
-    .inside-jumbo h1 {
-        font-size: 9.8vh;
-    }
-
-    .inside-jumbo p {
-        font-size: 2.7vh;
-    }
-}
-
-/* MEDIUM > LARGE PORTRAIT */
-@media screen and (min-width: 376px) and (max-width: 1025px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2) {
-    body {
-        font-size: 14px;
-    }
-
-    .inside-jumbo h1 {
-        font-size: 11vh;
-    }
-
-    .inside-jumbo p {
-        font-size: 3.1vh;
-    }
-}
-
-/* SMALL > MEDIUM LANDSCAPE */
-@media screen and (min-width: 565px) and (max-width: 670px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2) {
-    body {
-        font-size: 14px;
-    }
-
-    .inside-jumbo h1 {
-        font-size: 8vw;
-    }
-
-    .inside-jumbo p {
-        font-size: 1.9vw;
-    }
-}
-
-/* MEDIUM > LARGE LANDSCAPE*/
-@media screen and (min-width: 735px) and (max-width: 1370px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2) {
-    body {
-        font-size: 14px;
-    }
-
-    .inside-jumbo h1 {
-        font-size: 6.8vw;
-    }
-
-    .inside-jumbo p {
-        font-size: 1.7vw;
-    }
+#copy {
+    text-align: center;
 }

@@ -17,10 +17,10 @@
     <!-- ABOUT SECTION -->
     <section class="section" id="about-section">
         <div class="container">
-            <div class="row">
+            <div class="row" id="about-text">
                 <div class="col-md-12">
                     <h2 class="section-header">OM MIG</h2>
-                    <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolores quod sint perferendis vero! Ipsam repellat perferendis quis numquam nesciunt cum, iure ut inventore officia suscipit, unde odit eum, fugiat nemo maxime est eaque enim ullam voluptatibus! Commodi similique incidunt perspiciatis accusantium ipsum ullam provident, repellendus voluptates quis, modi adipisci?</p>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolores quod sint perferendis vero! Ipsam repellat perferendis quis numquam nesciunt cum, iure ut inventore officia suscipit, unde odit eum, fugiat nemo maxime est eaque enim ullam voluptatibus! Commodi similique incidunt perspiciatis accusantium ipsum ullam provident, repellendus voluptates quis, modi adipisci?</p>
                     <a href="{% url 'about' %}" class="btn btn-outline-light">Læs mere</a>
                 </div>
             </div>
@@ -72,10 +72,10 @@
     <!-- BLOG SECTION -->
     <section class="section" id="blog-section">
         <div class="container">
-            <h2 class="section-header">SENESTE INDLÆG</h2>
+            <h2 class="section-header" id="blog-head">SENESTE INDLÆG</h2>
             <div class="row">
                 {% for post in post_list %}
-                    <div class="col-md-4 col-sm-12">
+                    <div class="col">
                         <div class="card blog-card">
                             {% if post.image %}
                                 <img class="card-img-top" src="{{ post.image.url }}" alt="Blog Featured Image">
