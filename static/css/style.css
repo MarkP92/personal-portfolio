@@ -15,14 +15,14 @@ body {
 body p {
     color: #565656;
     line-height: 1.5;
-    font-size: 1em;
+    font-size: 1.3em;
 }
 
 body a {
     color: #303030;
     line-height: 1.4;
     font-weight: 500;
-    font-size: 1em;
+    font-size: 1.3em;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -226,10 +226,6 @@ h1,h2,h3,h4,h5,h6 {
 
 /* MEDIA SCREENS */
 @media screen and (max-width: 1025px) {
-    #navbarNav {
-        background: rgba(239, 239, 239, .6)
-    }
-
     .active {
         color: rgba(48, 48, 48, 1);
         border: none!important; 
