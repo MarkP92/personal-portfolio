@@ -1,12 +1,4 @@
-// FIXED MENU BG AFTER SCROLL
-$(window).scroll(function(){
-    if ($(window).scrollTop() >= 700) {
-       $('#menu').addClass('nav-scroll-bg');
-    }
-    else {
-       $('#menu').removeClass('nav-scroll-bg');
-    }
-});
+
 
 // ACTIVE NAV-LINK
 $(document).ready(function() {
@@ -29,4 +21,15 @@ $(window).scroll(function () {
         $(this).off('scroll');
     }
 });
+
+
+// MENU BG AFTER SCROLL
+// $(window).scroll(function(){
+//     if ($(window).scrollTop() >= 700) {
+//        $('#menu').addClass('nav-scroll-bg');
+//     }
+//     else {
+//        $('#menu').removeClass('nav-scroll-bg');
+//     }
+// });
 

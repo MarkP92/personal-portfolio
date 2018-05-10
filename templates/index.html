@@ -6,7 +6,7 @@
         <div class="container">
             <div class="inside-jumbo">
                 <h1 class="display-3">Mark<br>Petersen</h1>
-                <p class="lead">Hej, verden! Velkommen til mit online portfolio.<br>Mit navn er Mark, jeg er 25 år og selvlært Webudvikler.<br>Jeg brænder for at kode og designe flotte hjemmesider.</p>
+                <p class="lead">Koncept, Design, Udvikling & SEO</p>
                 <a class="btn btn-primary" id="cta" href="{% url 'project_list' %}" role="button">Projekter &raquo;</a>
             </div>
         </div>
@@ -20,7 +20,7 @@
             <div class="row" id="about-text">
                 <div class="col-md-12">
                     <h2 class="section-header">OM MIG</h2>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolores quod sint perferendis vero! Ipsam repellat perferendis quis numquam nesciunt cum, iure ut inventore officia suscipit, unde odit eum, fugiat nemo maxime est eaque enim ullam voluptatibus! Commodi similique incidunt perspiciatis accusantium ipsum ullam provident, repellendus voluptates quis, modi adipisci?</p>
+                    <p class="lead">Hej, verden! Velkommen til mit online portfolio.<br>Mit navn er Mark, jeg er 25 år og selvlært Webudvikler.<br>Jeg brænder for at kode og designe flotte hjemmesider.</p>
                     <a href="{% url 'about' %}" class="btn btn-outline-light">Læs mere</a>
                 </div>
             </div>
@@ -43,28 +43,26 @@
     </section>
     <!-- PROJECT SECTION -->
     <section class="section" id="project-section">
-        <div class="container-fluid">
-            <div class="container">
-                <h2 class="section-header">NYE PROJEKTER</h2>
-                <div class="row">
-                    <div class="card-deck">
-                        {% for project in project_list %}
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title"><a href="{% url 'project_detail' slug=project.slug %}">{{ project.title }}</a></h5>
-                                        <p class="card-text">{{ project.description|safe|truncatewords:10 }}</p>
-                                        {% if project.tech %}
-                                            <p class="card-text text-muted"><b>Teknologier:</b> {{ project.tech|safe }}</p>
-                                        {% endif %}
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted">Opdateret den {{ project.created_at }}</small>
-                                    </div>
+        <div class="container">
+            <h2 class="section-header">NYE PROJEKTER</h2>
+            <div class="row">
+                <div class="card-deck">
+                    {% for project in project_list %}
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="{% url 'project_detail' slug=project.slug %}">{{ project.title }}</a></h5>
+                                    <p class="card-text">{{ project.description|safe|truncatewords:10 }}</p>
+                                    {% if project.tech %}
+                                        <p class="card-text text-muted"><b>Teknologier:</b> {{ project.tech|safe }}</p>
+                                    {% endif %}
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Opdateret den {{ project.created_at }}</small>
                                 </div>
                             </div>
-                        {% endfor %}
-                    </div>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -75,7 +73,7 @@
             <h2 class="section-header" id="blog-head">SENESTE INDLÆG</h2>
             <div class="row">
                 {% for post in post_list %}
-                    <div class="col">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="card blog-card">
                             {% if post.image %}
                                 <img class="card-img-top" src="{{ post.image.url }}" alt="Blog Featured Image">

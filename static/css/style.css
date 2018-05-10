@@ -35,82 +35,8 @@ h1,h2,h3,h4,h5,h6 {
     padding: 0px;
 }
 
-/* MEDIA SCREENS */
-@media screen and (max-width: 1025px) {
-    #menu {
-        background: rgba(239, 239, 239, 0.7)
-    }
-
-    .active {
-        color: rgba(48, 48, 48, 1);
-        border: none!important; 
-    }
-}
-
-/* SMALL > MEDIUM PORTRAIT */
-@media screen and (min-width: 315px) and (max-width: 375px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2) {
-    body {
-        font-size: 12px;
-    }
-
-    .inside-jumbo h1 {
-        font-size: 9.8vh;
-    }
-
-    .inside-jumbo p {
-        font-size: 2.7vh;
-    }
-}
-
-/* MEDIUM > LARGE PORTRAIT */
-@media screen and (min-width: 376px) and (max-width: 1025px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2) {
-    body {
-        font-size: 14px;
-    }
-
-    .inside-jumbo h1 {
-        font-size: 11vh;
-    }
-
-    .inside-jumbo p {
-        font-size: 3.1vh;
-    }
-}
-
-/* SMALL > MEDIUM LANDSCAPE */
-@media screen and (min-width: 565px) and (max-width: 670px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2) {
-    body {
-        font-size: 14px;
-    }
-
-    .inside-jumbo h1 {
-        font-size: 8vw;
-    }
-
-    .inside-jumbo p {
-        font-size: 1.9vw;
-    }
-}
-
-/* MEDIUM > LARGE LANDSCAPE*/
-@media screen and (min-width: 735px) and (max-width: 1370px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2) {
-    body {
-        font-size: 14px;
-    }
-
-    .inside-jumbo h1 {
-        font-size: 6.8vw;
-    }
-
-    .inside-jumbo p {
-        font-size: 1.7vw;
-    }
-}
-
 /* NAVBAR */
-.nav-scroll-bg {
-    background: rgba(239, 239, 239, 0.5)
-}
+
 
 .navbar-light .navbar-nav .nav-link {
     font-size: 0.8em;
@@ -132,8 +58,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .inside-jumbo h1 {
-    margin-top: 35px;
-    font-size: 5em;
+    margin-top: 40px;
+    font-size: 7em;
     font-weight: 1000;
     color: rgb(27, 27, 27);
     text-shadow: 1.3px 1.3px #efefef;
@@ -141,7 +67,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .inside-jumbo p {
     color: #efefef;
-    font-size: 1.1em;
+    font-size: 1.8em;
     font-weight: 700;
     text-shadow: 0.8px 0.8px #303030;
 }
@@ -200,7 +126,8 @@ h1,h2,h3,h4,h5,h6 {
 
 /* PROJECT SECTION */ 
 #project-section {
-    background: #caebf2;
+    /* background: #caebf2; */
+    background: #7dc8d8;
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
@@ -257,6 +184,7 @@ h1,h2,h3,h4,h5,h6 {
 /* CARDS */
 .card {
     margin-bottom: 10px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1)
 }
 
 .card-title a {
@@ -294,4 +222,80 @@ h1,h2,h3,h4,h5,h6 {
 
 #copy {
     text-align: center;
+}
+
+/* MEDIA SCREENS */
+@media screen and (max-width: 1025px) {
+    #navbarNav {
+        background: rgba(239, 239, 239, .6)
+    }
+
+    .active {
+        color: rgba(48, 48, 48, 1);
+        border: none!important; 
+    }
+}
+
+/* SMALL > MEDIUM PORTRAIT */
+@media screen and (min-width: 315px) and (max-width: 375px) and (orientation:portrait) {
+    body {
+        font-size: 12px;
+    }
+
+    .inside-jumbo h1 {
+        margin-top: 100px;
+        font-size: 10vh;
+    }
+
+    .inside-jumbo p {
+        font-size: 3vh;
+    }
+}
+
+/* MEDIUM > LARGE PORTRAIT */
+@media screen and (min-width: 376px) and (max-width: 1025px) and (orientation:portrait) {
+    body {
+        font-size: 14px;
+    }
+
+    .inside-jumbo h1 {
+        margin-top: 120px;
+        font-size: 11vh;
+    }
+
+    .inside-jumbo p {
+        font-size: 3.2vh;
+    }
+}
+
+/* SMALL > MEDIUM LANDSCAPE */
+@media screen and (min-width: 565px) and (max-width: 670px) and (orientation:landscape) {
+    body {
+        font-size: 14px;
+    }
+
+    .inside-jumbo h1 {
+        margin-top: 12px;
+        font-size: 10vw;
+    }
+
+    .inside-jumbo p {
+        font-size: 3vw;
+    }
+}
+
+/* MEDIUM > LARGE LANDSCAPE*/
+@media screen and (min-width: 735px) and (max-width: 1370px) and (orientation:landscape) {
+    body {
+        font-size: 14px;
+    }
+
+    .inside-jumbo h1 {
+        margin-top: -15px;
+        font-size: 10vw;
+    }
+
+    .inside-jumbo p {
+        font-size: 2.3vw;
+    }
 }
