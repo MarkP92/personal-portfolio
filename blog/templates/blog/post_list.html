@@ -10,7 +10,7 @@
                 <div class="col-md-8 col-sm-12">
                     <div class="card blog-card">
                         {% if post.image %}
-                            <img class="card-img-top" src="{{ post.image.url }}" alt="Blog Featured Image">
+                            <img class="card-img-top" src="{{ post.image.url }}" class="img-fluid" alt="Blog Featured Image">
                         {% endif %}
                         <div class="card-body">
                             <h5 class="card-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h5>

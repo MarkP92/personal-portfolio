@@ -7,7 +7,7 @@
             <div class="col-md-12">
                 <div class="card project-card">
                     {% if project.image %}
-                        <img class="card-img-top" src="{{ project.image.url }}" alt="IMAGE NOT FOUND">
+                        <img class="card-img-top" src="{{ project.image.url }}" class="img-fluid" alt="IMAGE NOT FOUND">
                     {% endif %}
                     <div class="card-body">
                         <h5 class="card-title">{{ project.title }}</h5>

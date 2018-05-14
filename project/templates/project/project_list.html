@@ -13,7 +13,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="card mb-3">
                             {% if project.image %}
-                                <img class="card-img-top" src="{{ project.image.url }}" alt="IMAGE NOT FOUND">
+                                <img class="card-img-top" src="{{ project.image.url }}" class="img-fluid" alt="IMAGE NOT FOUND">
                             {% endif %}
                             <div class="card-body">
                                 <h5 class="card-title"><a href="{% url 'project_detail' slug=project.slug %}">{{ project.title }}</a></h5>
