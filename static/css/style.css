@@ -160,7 +160,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* ABOUT SECTION */ 
 #about-section {
-    margin: auto;
+    margin-top: -70px;
     padding: 1.25rem;
 }
 
