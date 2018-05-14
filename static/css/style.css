@@ -2,6 +2,7 @@
 html {
     font-size: 18px;
     overflow-x: hidden;
+    overflow-y: hidden;
     height: 100%;
 }
 
@@ -39,7 +40,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #img404 {
-    width: 600px;
+    /* width: 600px; */
     padding: 15px;
 }
 
