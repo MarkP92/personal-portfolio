@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}404 - Siden blev ikke fundet{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="display-5">404</h1>
+                <h3>Siden blev desværre ikke fundet!</h3>
+                <p>Du kan altid vende tilbage til <a href="{% url 'home' %}">forsiden!</a></p>
+                <img src="{% static 'img/dog_404.jpg' %}" alt="404 SAD DOG" id="img404">
+            </div>
+        </div>
+    </div>
+{% endblock %}

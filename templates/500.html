@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}500 - Server fejl{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="display-5">500</h1>
+                <h3>Ups! Noget gik galt :(</h3>
+                <p>Du kan altid vende tilbage til <a href="{% url 'home' %}">forsiden!</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="{% static 'img/dog_404.jpg' %}" alt="404 SAD DOG" id="img404">
+            </div>
+        </div>
+    </div>
+{% endblock %}
