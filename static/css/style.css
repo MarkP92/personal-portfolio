@@ -39,6 +39,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #img404 {
+    padding: 15px;
 }
 
 /* NAVBAR */
@@ -137,7 +138,6 @@ h1,h2,h3,h4,h5,h6 {
     background-image: url(../img/lines.png);
     background-color: rgba(255, 255, 255, 0.5);
     background-blend-mode: lighten;
-    padding-bottom: 15px;
     padding-top: 100px;
 }
 
@@ -169,6 +169,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #about-img {
+    padding: 15px;
     border-radius: 10%;
 }
 
