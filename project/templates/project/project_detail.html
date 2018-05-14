@@ -16,10 +16,10 @@
                             <p class="card-text text-muted"><b>Teknologier:</b> {{ project.tech|safe }}</p>
                         {% endif %}
                         {% if project.website %}
-                            <a href="{{ project.website }}"><button class="btn btn-outline-dark">Website</button></a>
+                            <a href="{{ project.website }}" target="_blank"><button class="btn btn-outline-dark">Website</button></a>
                         {% endif %}
                         {% if project.github %}
-                            <a href="{{ project.github }}"><button class="btn btn-outline-dark">GitHub</button></a>
+                            <a href="{{ project.github }}" target="_blank"><button class="btn btn-outline-dark">GitHub</button></a>
                         {% endif %}
                     </div>
                 </div>
