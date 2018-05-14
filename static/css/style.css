@@ -281,6 +281,10 @@ h1,h2,h3,h4,h5,h6 {
         background: rgba(248, 249, 250, 0.9);
     }
 
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 0.7em;
+    }
+
     .active {
         color: rgba(48, 48, 48, 1);
         border: none!important; 
