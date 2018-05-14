@@ -28,6 +28,7 @@ body a {
 }
 
 h1,h2,h3,h4,h5,h6 {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
     color: #303030;
     line-height: 1.4;
     font-weight: 600;
@@ -130,15 +131,14 @@ h1,h2,h3,h4,h5,h6 {
 
 /* MAIN CONTENT */
 .main-content {
+    padding-top: 100px;
     background-image: url(../img/lines.png);
     background-color: rgba(255, 255, 255, 0.5);
     background-blend-mode: lighten;
-    overflow: auto;
-    min-height: 100%;
 }
 
 .main-content h2 {
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .section {
@@ -147,7 +147,11 @@ h1,h2,h3,h4,h5,h6 {
 
 .section-header a {
     text-decoration: none;
-    font-weight: 1000;
+    font-weight: 9000;
+}
+
+.display-4 {
+    padding-bottom: 15px;
 }
 
 /* ABOUT SECTION */ 
@@ -158,6 +162,10 @@ h1,h2,h3,h4,h5,h6 {
 
 #about-text {
     visibility: hidden;
+}
+
+#about-img {
+    border-radius: 10%;
 }
 
 /* PROJECT SECTION */ 
@@ -232,7 +240,7 @@ h1,h2,h3,h4,h5,h6 {
     background-color: rgba(115, 108, 108, 0.6);
     background-blend-mode: darken;
     /* background: rgba(115, 108, 108, 0.4); */
-    height: 150px;
+    height: 100%;
     width: 100%;
     bottom: 0;
 }
@@ -254,9 +262,9 @@ h1,h2,h3,h4,h5,h6 {
     width: 3.5rem;
     height: 3.5rem;
     padding: 0.75rem;
-    opacity: 0.8;
-    -webkit-opacity: 0.8;
-    -moz-opacity: 0.8;
+    opacity: 0.7;
+    -webkit-opacity: 0.7;
+    -moz-opacity: 0.7;
 }
 
 .social li img:hover {
