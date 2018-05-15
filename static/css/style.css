@@ -74,7 +74,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* HERO */
 .hero-section {
-    background: linear-gradient(#caebf2, transparent 80%), linear-gradient(0deg, #efefef, transparent 2%), url(../img/new_hero_compr.jpg);
+    background: linear-gradient(#caebf2, transparent 80%), linear-gradient(0deg, #efefef, transparent 2%), url(../img/new_hero.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     height: 95vh;
@@ -192,15 +192,14 @@ h1,h2,h3,h4,h5,h6 {
 #about-img {
     padding: 15px;
     border-radius: 10%;
-    height: 400px;
 }
 
 #about-jumbo {
     background-image: url(../img/angkor_2.JPG);
     background-size: cover;
-    height: 400px;
     background-repeat: no-repeat;
     background-position: center center;
+    height: 60vh;
 }
 
 /* SKILL ICON LIST */ 
@@ -216,7 +215,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .skill-item img {
-    /* animation: fadeInSkills 6s linear infinite 0s; */
     width: 40px;
     height: 40px;
     opacity: 0.5;
@@ -233,14 +231,6 @@ h1,h2,h3,h4,h5,h6 {
     -moz-opacity: 0.9;
     transform: scale(1.5);
 }
-
-/* @keyframes fadeInSkills {
-    0% { opacity: 0; animation-timing-function: ease-in; }
-    8% { opacity: 0.4; }
-    19% { opacity: 0.6; }
-	25% { opacity: 0.9; }
-    100% { opacity: 1; }
-} */
 
 /* PROJECTS*/ 
 #project-section {
