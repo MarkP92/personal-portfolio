@@ -13,3 +13,6 @@ MyPortfolio/settings_prod.py
 
 # DATABASE
 *.sqlite3
+
+# OTHER
+templates/base_test.html

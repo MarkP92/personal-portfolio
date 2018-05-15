@@ -79,21 +79,23 @@
         <div class="container">
             <h2 class="section-header" id="blog-head">SENESTE INDLÆG</h2>
             <div class="row">
-                {% for post in post_list %}
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="card blog-card">
-                            {% if post.image %}
-                                <img class="card-img-top" src="{{ post.image.url }}" alt="Blog Featured Image">
-                            {% endif %}
-                            <div class="card-body">
-                                <h5 class="card-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h5>
-                                <p class="text-muted">{{ post.created_at }}</p>
-                                <p class="card-text">{{ post.text|safe|truncatewords:10 }}</p>
-                                <a href="{% url 'post_detail' slug=post.slug %}" class="btn btn-outline-light">Læs mere</a>
+                <div class="card-deck">
+                    {% for post in post_list %}
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="card blog-card">
+                                {% if post.image %}
+                                    <img class="card-img-top" src="{{ post.image.url }}" alt="Blog Featured Image">
+                                {% endif %}
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h5>
+                                    <p class="text-muted">{{ post.created_at }}</p>
+                                    <p class="card-text">{{ post.text|safe|truncatewords:10 }}</p>
+                                    <a href="{% url 'post_detail' slug=post.slug %}" class="btn btn-outline-light">Læs mere</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </section>

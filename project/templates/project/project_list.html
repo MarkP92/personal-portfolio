@@ -2,11 +2,9 @@
 {% block title %}Projekter{% endblock %}
 {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="display-5">PROJEKTER</h1>
-        </div>
-    </div> 
+    <div class="jumbotron" id="project-jumbo">
+        <h1 class="display-5" id="jumbo-head">PROJEKTER</h1>
+    </div>
     <div class="row">
         <div class="card-deck">
             {% for project in project_list %}
