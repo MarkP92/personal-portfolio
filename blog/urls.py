@@ -5,5 +5,7 @@ from blog import views
 
 urlpatterns = [
     path('', views.PostListView.as_view(), name="post_list"),
-    re_path(r'^(?P<slug>[-\w]+)/$', views.PostDetailView.as_view(), name="post_detail"),
+    re_path(r'^indlæg/(?P<slug>[-\w]+)/$', views.PostDetailView.as_view(), name="post_detail"),
+    path('kategorier/', views.AllCategoriesView.as_view(), name="category_list"),
+    re_path(r'^kategorier/(?P<slug>[-\w]+)/$', views.CategoryDetailView.as_view(), name="category_detail"),
 ]

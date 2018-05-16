@@ -4,10 +4,15 @@
 
 {% block content %}
     <div class="container">
+        <div class="jumbotron" id="cat-jumbo">
+            <h1 class="display-5" id="jumbo-head">{{ category.title }}</h1>
+        </div>
         <div class="row">
-            <div class="col-md-12">
-                
-            </div>
+            {% for post in category.post_set.all %}
+                <div class="col-md-12">
+                    <h4><a href="{% url 'post_detail' slug=post.slug %}">{{ post }}</a></h4>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

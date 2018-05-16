@@ -8,9 +8,16 @@
         <h1 class="display-5" id="jumbo-head">KATEGORIER</h1>
     </div>
     <div class="row">
-        <div class="col-md-2"></div>
-            
-        <div class="col-md-2"></div>
+        {% for category in category_list %}
+            <div class="col-md-4">
+                <ul>
+                    <li><h2><a href="{% url 'category_detail' slug=category.slug %}">{{ category.title }}</a></h2></li>
+                    {% for post in category.post_set.all %}
+                        <li><a href="{% url 'post_detail' slug=post.slug %}"><p>{{ post }}</p></a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
     </div>
     <br />
 </div>

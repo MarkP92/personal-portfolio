@@ -7,26 +7,33 @@
     <div class="jumbotron" id="blog-jumbo">
         <h1 class="display-5" id="jumbo-head">BLOG</h1>
     </div>
-    {% for post in post_list %}
-        <div class="row">
-            <div class="col-md-2"></div>
-                <div class="col-md-8 col-sm-12">
-                    <div class="card blog-card">
-                        {% if post.image %}
-                            <img class="card-img-top" src="{{ post.image.url }}" class="img-fluid" alt="Blog Featured Image">
-                        {% endif %}
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h5>
-                            <p class="card-text">{{ post.author }}<br>
-                            {{ post.created_at }}</p>
-                            <p>{{ post.text|safe|truncatewords:10 }}</p>
-                            <a href="{% url 'post_detail' slug=post.slug %}" class="btn btn-outline-dark">Læs mere</a>
-                        </div>
+    <div class="row">
+        {% for post in post_list %}
+            <div class="col-md-8 col-sm-12">
+                <div class="card blog-card">
+                    {% if post.image %}
+                        <img class="card-img-top" src="{{ post.image.url }}" class="img-fluid" alt="Blog Featured Image">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h5>
+                        <p class="card-text text-muted">{{ post.author }}<br>
+                        {{ post.created_at }}</p>
+                        <p>{{ post.text|safe|truncatewords:10 }}</p>
+                        <a href="{% url 'post_detail' slug=post.slug %}" class="btn btn-outline-dark">Læs mere</a>
                     </div>
                 </div>
-            <div class="col-md-2"></div>
+            </div>
+        {% endfor %}
+        <div class="col-md-4">
+            <div class="sidebar">
+                <h5><a href="{% url 'category_list' %}">KATEGORIER</a></h5>
+                <ul class="cat-list">
+                    {% for category in categories %}
+                        <li class="text-muted"><a href="{% url 'category_detail' slug=category.slug %}"><p>{{ category.title }}</p></a></li><hr />
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
-    {% endfor %}
-    <br />
+    </div>
 </div>
 {% endblock %}
