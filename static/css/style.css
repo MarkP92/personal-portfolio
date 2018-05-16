@@ -282,6 +282,10 @@ h1,h2,h3,h4,h5,h6 {
     text-decoration: none;
 }
 
+.card-deck {
+    width: 100vw;
+}
+
 /* FOOTER */
 .footer {
     background-image: url(../img/lines.png);
