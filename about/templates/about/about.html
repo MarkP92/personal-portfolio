@@ -1,5 +1,6 @@
 {% extends 'about/about_base.html' %}
 {% load static %}
+{% block seo_desc %}Jeg har en stor passion for at designe og uvikle moderne hjemmesider, der fungerer på alle skærmstørrelser.{% endblock %} 
 {% block title %}Om mig{% endblock %}
 
 {% block content %}
@@ -8,10 +9,32 @@
         <div class="row">
             <div class="col-lg-8 col-sm-12">
                     <h1 class="display-5">Mark Petersen</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae libero velit accusamus possimus ratione illum labore ex laboriosam, ab aspernatur distinctio reprehenderit eaque at officia, voluptate accusantium? Assumenda non, eaque, necessitatibus officiis eligendi modi laboriosam incidunt atque dolor esse rerum quis sapiente provident quia laudantium ipsam suscipit? Provident libero expedita, repellat asperiores, et eveniet sunt nihil maiores architecto facere dolorum doloremque modi, ratione soluta quia dicta! Delectus aliquam unde, porro ipsam veniam cumque quas architecto quidem. Error possimus mollitia odio quam necessitatibus quisquam molestiae porro a? Enim quos adipisci ullam id, laborum provident magni odio et numquam maxime soluta ab.</p>
+                <p class="lead">
+                    Mit navn er Mark, jeg er 25 år og bosat i Sønderjylland.<br />
+                    Jeg har en stor passion for at designe og uvikle moderne hjemmesider, der fungerer på alle skærmstørrelser.<br />
+                    Min største interesse er klart 'backend', og til dette er mit foretrukne sprog Python med frameworket <a href="https://www.djangoproject.com/">Django!</a><br />
+                    Design og 'frontend' er dog et område, jeg begynder at interessere mig mere og mere for.<br /><br />
+                    I dag bliver virksomheder fundet på søgemaskiner som Google og Bing og Search Engine Optimization er derfor er vigtigt område, hvilket jeg også har erfaring med.<br />
+                </p>
+                <ul class="skills">
+                    <li class="skill-item"><img src="{% static 'img/html_icon.png' %}" alt="HTML5"/></li>
+                    <li class="skill-item"><img src="{% static 'img/css_icon.png' %}" alt="CSS3"/></li>
+                    <li class="skill-item"><img src="{% static 'img/js_icon.png' %}" alt="JavaScript"/></li>
+                    <li class="skill-item"><img src="{% static 'img/bootstrap_icon.png' %}" alt="Bootstrap 4"/></li>
+                    <li class="skill-item"><img src="{% static 'img/jquery_icon.png' %}" alt="jQuery"/></li>
+                    <li class="skill-item"><img src="{% static 'img/python_icon.png' %}" alt="Python"/></li>
+                    <li class="skill-item"><img src="{% static 'img/django_icon.svg' %}" alt="Django"/></li>
+                    <li class="skill-item"><img src="{% static 'img/git_icon.png' %}" alt="Git"/></li>
+                    <li class="skill-item"><img src="{% static 'img/wp_icon.png' %}" alt="WordPress"/></li>
+                </ul>
             </div>
             <div class="col-lg-4 col-sm-12">
                 <img src="{% static 'img/mark.jpg' %}" class="img-fluid" alt="Mark Petersen" id="about-img">
+                <ul class="social">
+                    <li><a href="https://www.facebook.com/Mr.Quid" target="_blank">Facebook</a></li>
+                    -
+                    <li><a href="https://twitter.com/MarkP_DK" target="_blank">Twitter</li>
+                    </ul>
             </div>
         </div>
     </div>  
