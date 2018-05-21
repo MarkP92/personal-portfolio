@@ -17,7 +17,7 @@ body {
 
 body p {
     color: #565656;
-    line-height: 1.5;
+    line-height: 1.7;
     font-size: 1.3em;
     margin: 0px;
     padding: 10px;
@@ -215,6 +215,13 @@ li {
     background-repeat: no-repeat;
     background-position: center center;
     height: 60vh;
+}
+
+.code-box {
+    background: #979797;
+    border-radius: 10%;
+    color: #f8f9fa;
+    padding: 2px 4px 2px 4px;
 }
 
 /* SKILL ICON LIST */ 
