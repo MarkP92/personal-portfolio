@@ -4,21 +4,6 @@ $(document).ready(function() {
     $('a[href="' + location.pathname + '"]').closest('li').addClass('active'); 
 });
 
-// FADE IN ANIMATION FOR ABOUT SECTION
-// $(window).scroll(function () {
-//     var topDivHeight = $(".hero-section").height();
-//     var viewPortSize = $(window).height();
-    
-//     var triggerAt = 400;
-//     var triggerHeight = (topDivHeight - viewPortSize) + triggerAt;
-
-//     if ($(window).scrollTop() >= triggerHeight) {
-//         $('#about-text').css('visibility', 'visible').hide().fadeIn();
-//         $('.skills').css('visibility', 'visible').hide().fadeIn(2500);
-//         $(this).off('scroll');
-//     }
-// });
-
 // FIXED HEADER ON SCROLL UP
 $(document).ready(function() {
     var previousScroll = 0,

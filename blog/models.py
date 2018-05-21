@@ -7,6 +7,7 @@ import PIL
 class Category(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField(unique=True)
+    seo_desc = models.CharField(max_length=120, default='Portfolio og personlig hjemmeside for Mark Petersen', blank=True, null=True)
 
     class Meta:
         ordering = ['title']
@@ -23,7 +24,6 @@ class Category(models.Model):
     def __str__(self):
         return self.title
 
-
 class Post(models.Model):
     title = models.CharField(max_length=200)
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
@@ -33,6 +33,7 @@ class Post(models.Model):
     slug = models.SlugField(unique=True)
     image = models.ImageField(upload_to='img', null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default='')
+    seo_desc = models.CharField(max_length=120, default='Portfolio og personlig hjemmeside for Mark Petersen', blank=True, null=True)
 
     class Meta:
         ordering = ['-created_at']

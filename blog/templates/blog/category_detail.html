@@ -1,5 +1,6 @@
 {% extends 'blog/blog_base.html' %}
 {% load static %}
+{% block seo_desc %}{{ category.seo_desc }}{% endblock %}
 {% block title %}{{ category.title }}{% endblock %}
 
 {% block content %}
@@ -10,7 +11,18 @@
         <div class="row">
             {% for post in category.post_set.all %}
                 <div class="col-md-12">
-                    <h4><a href="{% url 'post_detail' slug=post.slug %}">{{ post }}</a></h4>
+                    <div class="card blog-card">
+                        {% if post.image %}
+                            <img class="card-img-top" src="{{ post.image.url }}" class="img-fluid" alt="Blog Featured Image">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h5>
+                            <p class="card-text text-muted">{{ post.author }}<br>
+                            {{ post.created_at }}</p>
+                            <p>{{ post.text|safe|truncatewords:10 }}</p>
+                            <a href="{% url 'post_detail' slug=post.slug %}" class="btn btn-outline-dark">Læs mere</a>
+                        </div>
+                    </div>
                 </div>
             {% endfor %}
         </div>

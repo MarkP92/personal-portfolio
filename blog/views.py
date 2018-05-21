@@ -23,8 +23,6 @@ class CategoryDetailView(DetailView):
     model = Category
     template_name = 'blog/category_detail.html'
 
-    
-
 class AllCategoriesView(ListView):
     template_name = 'blog/category_list.html'
 

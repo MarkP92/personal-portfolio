@@ -13,6 +13,7 @@ class Project(models.Model):
     website = models.URLField(max_length=120, default='', blank=True, null=True)
     github = models.URLField(max_length=120, default='', blank=True, null=True)
     slug = models.SlugField(default='')
+    seo_desc = models.CharField(max_length=120, default='Portfolio og personlig hjemmeside for Mark Petersen', blank=True, null=True)
 
     class Meta:
         ordering = ['-created_at']

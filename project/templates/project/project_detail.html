@@ -1,5 +1,6 @@
 {% extends 'project/project_base.html' %}
 {% load static %}
+{% block seo_desc %}{{ project.seo_desc }}{% endblock %}
 {% block title %}{{ project.title }}{% endblock %}
 
 {% block content %}

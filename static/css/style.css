@@ -1,6 +1,6 @@
 /* GLOBAL */
 html {
-    font-size: 18px;
+    font-size: 17px;
     overflow-x: hidden;
     height: 100%;
 }
@@ -39,6 +39,7 @@ h1,h2,h3,h4,h5,h6 {
     color: #303030;
     line-height: 1.4;
     font-weight: 600;
+    font-size: 1.5rem;
 }
 
 .container-fluid {
@@ -65,6 +66,7 @@ li {
 }
 
 .active {
+    color: rgba(48, 48, 48, 1);
     border-bottom: 1px solid #ff3b3f; 
 }
 
@@ -177,8 +179,9 @@ li {
     padding-top: 100px;
 }
 
-.main-content h2 {
+.section-header {
     font-weight: 700;
+    font-size: 1.8rem;
 }
 
 .section {
@@ -187,16 +190,12 @@ li {
 
 .section-header a {
     text-decoration: none;
-    font-weight: 9000;
-}
-
-.display-4 {
-    padding-bottom: 15px;
 }
 
 #jumbo-head {
     color: rgb(255, 255, 255);
     text-shadow: 0.8px 0.8px #303030;
+    font-size: 3rem;
 }
 
 /* ABOUT */ 
@@ -207,7 +206,7 @@ li {
 
 #about-img {
     padding: 15px;
-    border-radius: 10%;
+    border-radius: 50%;
 }
 
 #about-jumbo {
@@ -357,13 +356,24 @@ li {
 }
 
 /* MEDIA SCREENS */
-@media screen and (max-width: 1025px) {
-    #menu {
-        background-color: rgba(255, 255, 255, 1);
+@media screen {
+    body {
+        font-size: 0.9em;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        font-weight: 400;
+        font-size: 1.5rem;
     }
 
     .navbar-light .navbar-nav .nav-link {
-        font-size: 0.7em;
+        font-size: 0.9em!important;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    #menu {
+        background-color: rgba(255, 255, 255, 1);
     }
 
     .active {
@@ -374,10 +384,6 @@ li {
 
 /* SMALL > MEDIUM PORTRAIT */
 @media screen and (min-width: 315px) and (max-width: 375px) and (orientation:portrait) {
-    body {
-        font-size: 12px;
-    }
-
     .inside-jumbo h1 {
         margin-top: 100px;
         font-size: 11.5vh;
@@ -390,10 +396,6 @@ li {
 
 /* MEDIUM > LARGE PORTRAIT */
 @media screen and (min-width: 376px) and (max-width: 1025px) and (orientation:portrait) {
-    body {
-        font-size: 14px;
-    }
-
     .inside-jumbo h1 {
         margin-top: 120px;
         font-size: 11.5vh;
@@ -406,10 +408,6 @@ li {
 
 /* SMALL > MEDIUM LANDSCAPE */
 @media screen and (min-width: 565px) and (max-width: 670px) and (orientation:landscape) {
-    body {
-        font-size: 14px;
-    }
-
     .inside-jumbo h1 {
         margin-top: 10px;
         font-size: 11.5vw;
@@ -422,16 +420,16 @@ li {
 
 /* MEDIUM > LARGE LANDSCAPE*/
 @media screen and (min-width: 735px) and (max-width: 1370px) and (orientation:landscape) {
-    body {
-        font-size: 14px;
-    }
-
     .inside-jumbo h1 {
-        margin-top: -10px;
         font-size: 11.5vw;
     }
 
     .inside-jumbo p {
         font-size: 6vw;
+    }
+
+    .active {
+        color: rgba(48, 48, 48, 1);
+        border-bottom: 1px solid #ff3b3f; 
     }
 }

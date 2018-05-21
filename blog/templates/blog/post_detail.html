@@ -1,5 +1,6 @@
 {% extends 'blog/blog_base.html' %}
 {% load static %}
+{% block seo_desc %}{{ post.seo_desc }}{% endblock %}
 {% block title %}{{ post.title }}{% endblock %}
 
 {% block content %}
