@@ -13,7 +13,17 @@
                 <ul>
                     <li><h2><a href="{% url 'category_detail' slug=category.slug %}">{{ category.title }}</a></h2></li>
                     {% for post in category.post_set.all %}
-                        <li><a href="{% url 'post_detail' slug=post.slug %}"><p>{{ post }}</p></a></li>
+                    <div class="card">
+                            {% if post.image %}
+                                <img class="card-img-top" src="{{ post.image.url }}" class="img-fluid" alt="Blog Featured Image">
+                            {% endif %}
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h5>
+                                <p class="card-text text-muted">{{ post.created_at }}</p>
+                                <p>{{ post.text|safe|truncatewords:10 }}</p>
+                                <a href="{% url 'post_detail' slug=post.slug %}" class="btn btn-outline-dark">Læs mere</a>
+                            </div>
+                        </div>
                     {% endfor %}
                 </ul>
             </div>

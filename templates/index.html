@@ -6,15 +6,14 @@
         <div class="container">
             <div class="inside-jumbo">
                 <h1 class="display-3">Mark<br>Petersen</h1>
-                    <div class="shuffle-words">
-                        <p class="lead">
-                            <span>Koncept</span>
-                            <span>Design</span>
-                            <span>Udvikling</span>
-                            <span>SEO</span>
-                        </p>
-                    </div>
-                <!-- <a class="btn btn-primary" id="cta" href="{% url 'project_list' %}" role="button">Projekter &raquo;</a> -->
+                <div class="shuffle-words">
+                    <p class="lead">
+                        <span>Koncept</span>
+                        <span>Design</span>
+                        <span>Udvikling</span>
+                        <span>SEO</span>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -25,26 +24,34 @@
     <section class="section" id="about-section">
         <div class="container">
             <div class="row" id="about-text">
-                <div class="col-md-12">
-                    <h2 class="section-header">OM MIG</h2>
-                    <p class="lead">Hej, verden! Velkommen til mit online portfolio.<br>Mit navn er Mark, jeg er 25 år og selvlært Webudvikler.<br>Jeg brænder for at kode og designe flotte hjemmesider.</p>
+                <div class="col-md-8 col-sm-12">
+                    <h2 class="section-header">MARK PETERSEN</h2>
+                    <p class="lead">
+                        Hej, verden! Velkommen til mit online portfolio.<br />
+                        Mit navn er Mark, jeg er 25 år og selvlært Webudvikler.<br />
+                        Jeg brænder for at kode og designe flotte hjemmesider.<br />
+                    </p>
                     <a href="{% url 'about' %}" class="btn btn-outline-light">Læs mere</a>
+                    <ul class="skills">
+                        <li class="skill-item"><img src="{% static 'img/html_icon.svg' %}" alt="HTML5"/></li>
+                        <li class="skill-item"><img src="{% static 'img/css_icon.svg' %}" alt="CSS3"/></li>
+                        <li class="skill-item"><img src="{% static 'img/js_icon.svg' %}" alt="JavaScript"/></li>
+                        <li class="skill-item"><img src="{% static 'img/bootstrap_icon.svg' %}" alt="Bootstrap 4"/></li>
+                        <li class="skill-item"><img src="{% static 'img/jquery_icon.svg' %}" alt="jQuery"/></li>
+                        <li class="skill-item"><img src="{% static 'img/python_icon.svg' %}" alt="Python"/></li>
+                        <li class="skill-item"><img src="{% static 'img/django_icon.svg' %}" alt="Django"/></li>
+                        <li class="skill-item"><img src="{% static 'img/heroku_icon.svg' %}" alt="Heroku"/></li>
+                        <li class="skill-item"><img src="{% static 'img/git_icon.svg' %}" alt="Git"/></li>
+                        <li class="skill-item"><img src="{% static 'img/wp_icon.svg' %}" alt="WordPress"/></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <img src="{% static 'img/mark.jpg' %}" class="img-fluid" alt="Mark Petersen" id="about-img">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <ul class="skills">
-                        <li class="skill-item"><img src="{% static 'img/html_icon.png' %}" alt="HTML5"/></li>
-                        <li class="skill-item"><img src="{% static 'img/css_icon.png' %}" alt="CSS3"/></li>
-                        <li class="skill-item"><img src="{% static 'img/js_icon.png' %}" alt="JavaScript"/></li>
-                        <li class="skill-item"><img src="{% static 'img/bootstrap_icon.png' %}" alt="Bootstrap 4"/></li>
-                        <li class="skill-item"><img src="{% static 'img/jquery_icon.png' %}" alt="jQuery"/></li>
-                        <li class="skill-item"><img src="{% static 'img/python_icon.png' %}" alt="Python"/></li>
-                        <li class="skill-item"><img src="{% static 'img/django_icon.svg' %}" alt="Django"/></li>
-                        <li class="skill-item"><img src="{% static 'img/heroku_icon.png' %}" alt="Heroku"/></li>
-                        <li class="skill-item"><img src="{% static 'img/git_icon.png' %}" alt="Git"/></li>
-                        <li class="skill-item"><img src="{% static 'img/wp_icon.png' %}" alt="WordPress"/></li>
-                    </ul>
+                    
                 </div>
             </div>
         </div>
@@ -83,7 +90,7 @@
                 <div class="card-deck">
                     {% for post in post_list %}
                         <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="card blog-card">
+                            <div class="card">
                                 {% if post.image %}
                                     <img class="card-img-top" src="{{ post.image.url }}" alt="Blog Featured Image">
                                 {% endif %}

@@ -11,7 +11,7 @@
                     <p class="muted-text post"><a href="{% url 'category_detail' slug=post.category.slug %}">{{ post.category }}</a></p>
                     <p class="date post author post">{{ post.published_at }}</p>
                 {% if post.image %}
-                    <img class="img-fluid" src="{{ post.image.url }}" alt="post image">
+                    <img class="img-fluid" src="{{ post.image.url }}" alt="Blog Featured Image">
                 {% endif %}
                 <p class="post-content">{{ post.text|safe|linebreaksbr }}</p>
             </div>

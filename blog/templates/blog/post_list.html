@@ -10,7 +10,7 @@
     <div class="row">
         {% for post in post_list %}
             <div class="col-md-8">
-                <div class="card blog-card">
+                <div class="card">
                     {% if post.image %}
                         <img class="card-img-top" src="{{ post.image.url }}" class="img-fluid" alt="Blog Featured Image">
                     {% endif %}
@@ -22,6 +22,7 @@
                         <a href="{% url 'post_detail' slug=post.slug %}" class="btn btn-outline-dark">Læs mere</a>
                     </div>
                 </div>
+                <br />
             </div>
         {% endfor %}
         <div class="col-md-4">
