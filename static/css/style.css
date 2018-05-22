@@ -320,6 +320,10 @@ li {
     text-decoration: none;
 }
 
+.card-deck {
+    width: 100vw;
+}
+
 /* FOOTER */
 .footer {
     background-color: rgba(115, 108, 108, 0.6);
