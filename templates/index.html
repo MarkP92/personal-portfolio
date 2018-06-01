@@ -6,14 +6,6 @@
         <div class="container">
             <div class="inside-jumbo">
                 <h1 class="display-3">Mark<br>Petersen</h1>
-                <div class="shuffle-words">
-                    <p class="lead">
-                        <span>Koncept</span>
-                        <span>Design</span>
-                        <span>Udvikling</span>
-                        <span>SEO</span>
-                    </p>
-                </div>
             </div>
         </div>
     </div>
@@ -96,9 +88,11 @@
                                 {% endif %}
                                 <div class="card-body">
                                     <h5 class="card-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h5>
-                                    <p class="text-muted">{{ post.created_at }}</p>
                                     <p class="card-text">{{ post.text|safe|truncatewords:10 }}</p>
                                     <a href="{% url 'post_detail' slug=post.slug %}" class="btn btn-outline-light">Læs mere</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">{{ post.created_at }}</small>
                                 </div>
                             </div>
                         </div>

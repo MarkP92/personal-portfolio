@@ -108,31 +108,19 @@ li {
     margin: 0;
 }
 
+.inside-jumbo {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    align-items: center;
+    height: 85vh;
+}
+
 .inside-jumbo h1 {
-    margin-top: 40px;
     font-size: 7em;
     font-weight: 1000;
     color: rgb(27, 27, 27);
     text-shadow: 1.3px 1.3px #efefef;
-}
-
-.inside-jumbo p {
-    color: #efefef;
-    font-size: 4em;
-    font-weight: 700;
-    text-shadow: 0.8px 0.8px #303030;
-}
-
-#cta {
-    background-color: rgba(0,0,0,0);
-    color: #caebf2;
-    border: 2px solid #caebf2;
-}
-
-#cta:hover {
-    color: #525252;
-    background-color: #caebf2;
-    border: 2px solid #525252;
 }
 
 .btn {
@@ -144,38 +132,6 @@ li {
     background-color: rgba(255, 59, 63, 0.7);
     color: #efefef;
     border: none;
-}
-
-.shuffle-words span {
-    position: absolute;
-    display: inline;
-    opacity: 0;
-    overflow: hidden;
-    animation: shuffleWords 12s linear infinite 0s;
-}
-
-.shuffle-words span:nth-child(2) {
-    animation-delay: 3s; 
-}
-
-.shuffle-words span:nth-child(3) {
-    animation-delay: 6s; 
-}
-
-.shuffle-words span:nth-child(4) {
-    animation-delay: 9s; 
-}
-
-.shuffle-words span:nth-child(5) {
-    animation-delay: 12s; 
-}
-
-@keyframes shuffleWords {
-    0% { opacity: 1; animation-timing-function: ease-in; }
-    8% { opacity: 0.8; }
-    19% { opacity: 0.4; }
-	25% { opacity: 0; }
-    100% { opacity: 0; }
 }
 
 /* MAIN CONTENT */
@@ -207,7 +163,7 @@ li {
 
 /* ABOUT */ 
 #about-section {
-    margin-top: -70px;
+    /* margin-top: -70px; */
     padding: 1.25rem;
 }
 
@@ -263,7 +219,7 @@ li {
 
 /* PROJECTS*/ 
 #project-section {
-    background-color: #8fcfff;
+    background-color: rgba(143, 207, 255, 0.6);
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
@@ -279,7 +235,7 @@ li {
 
 /* BLOG */
 #blog-section {
-    background: #ff3b3f;
+    background: rgba(255, 59, 63, 0.6);
 }
 
 .post {
@@ -313,6 +269,7 @@ li {
 /* CARDS */
 .card {
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
 }
 
 .card-title a {
@@ -393,36 +350,21 @@ li {
 /* SMALL > MEDIUM PORTRAIT */
 @media screen and (min-width: 315px) and (max-width: 375px) and (orientation:portrait) {
     .inside-jumbo h1 {
-        margin-top: 100px;
         font-size: 11.5vh;
-    }
-
-    .inside-jumbo p {
-        font-size: 8vh;
     }
 }
 
 /* MEDIUM > LARGE PORTRAIT */
 @media screen and (min-width: 376px) and (max-width: 1025px) and (orientation:portrait) {
     .inside-jumbo h1 {
-        margin-top: 120px;
         font-size: 11.5vh;
-    }
-
-    .inside-jumbo p {
-        font-size: 8vh;
     }
 }
 
 /* SMALL > MEDIUM LANDSCAPE */
 @media screen and (min-width: 565px) and (max-width: 670px) and (orientation:landscape) {
     .inside-jumbo h1 {
-        margin-top: 10px;
         font-size: 11.5vw;
-    }
-
-    .inside-jumbo p {
-        font-size: 6vw;
     }
 }
 
@@ -430,10 +372,6 @@ li {
 @media screen and (min-width: 735px) and (max-width: 1370px) and (orientation:landscape) {
     .inside-jumbo h1 {
         font-size: 11.5vw;
-    }
-
-    .inside-jumbo p {
-        font-size: 6vw;
     }
 
     .active {
