@@ -9,7 +9,7 @@ class Tech(models.Model):
 
     class Meta:
         verbose_name = 'Teknologi'
-        verbose_name_plural = 'Tecknologier'
+        verbose_name_plural = 'Teknologier'
 
     def __str__(self):
         return self.title
