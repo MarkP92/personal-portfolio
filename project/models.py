@@ -4,10 +4,20 @@ from django.urls import reverse
 from django.template.defaultfilters import slugify
 import PIL
 
+class Tech(models.Model):
+    title = models.CharField(max_length=100)
+
+    class Meta:
+        verbose_name = 'Teknologi'
+        verbose_name_plural = 'Tecknologier'
+
+    def __str__(self):
+        return self.title
+
 class Project(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
-    tech = models.CharField(max_length=150, default='', blank=True, null=True)
+    tech = models.ManyToManyField(Tech)
     image = models.ImageField(upload_to='../media/img', blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     website = models.URLField(max_length=120, default='', blank=True, null=True)

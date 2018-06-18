@@ -16,7 +16,7 @@
                         <h5 class="card-title">{{ project.title }}</h5>
                         <p class="card-text">{{ project.description|safe }}</p>
                         {% if project.tech %}
-                            <p class="card-text text-muted"><b>Teknologier:</b> <span class="code-box">{{ project.tech|safe }}</span></p>
+                            <p class="card-text text-muted"><b>Teknologier:</b> {% for tech in project.tech.all %}<span class="code-box">{{ tech }}</span>{% endfor %}</p>
                         {% endif %}
                         {% if project.website %}
                             <a href="{{ project.website }}" target="_blank"><button class="btn btn-outline-dark">Website</button></a>

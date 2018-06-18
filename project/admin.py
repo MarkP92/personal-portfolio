@@ -1,9 +1,12 @@
 from django.contrib import admin
 from mediumeditor.admin import MediumEditorAdmin
-from project.models import Project
+from project.models import Project, Tech
 
 class ProjectAdmin(MediumEditorAdmin, admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     mediumeditor_fields = ('description')
 
 admin.site.register(Project, ProjectAdmin)
+
+admin.site.register(Tech)
+

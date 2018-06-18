@@ -14,13 +14,13 @@
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="card mb-3">
                             {% if project.image %}
-                                <img class="card-img-top" src="{{ project.image.url }}" class="img-fluid" alt="IMAGE NOT FOUND">
+                            <a href="{% url 'project_detail' slug=project.slug %}"><img class="card-img-top" src="{{ project.image.url }}" class="img-fluid" alt="IMAGE NOT FOUND"></a>
                             {% endif %}
                             <div class="card-body">
                                 <h5 class="card-title"><a href="{% url 'project_detail' slug=project.slug %}">{{ project.title }}</a></h5>
                                 <p class="card-text">{{ project.description|safe|truncatewords:5 }}</p>
                                 {% if project.tech %}
-                                    <p class="card-text text-muted"><b>Teknologier:</b> {{ project.tech|safe }}</p>
+                                    <p class="card-text text-muted"><b>Teknologier:</b> {% for tech in project.tech.all %}{{ tech }}, {% endfor %}</p>
                                 {% endif %}
                             </div>
                             <div class="card-footer">

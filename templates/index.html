@@ -20,7 +20,7 @@
                     <h2 class="section-header">MARK PETERSEN</h2>
                     <p class="lead">
                         Hej, verden! Velkommen til mit online portfolio.<br />
-                        Mit navn er Mark, jeg er 25 år og selvlært Webudvikler.<br />
+                        Mit navn er Mark, jeg er 25 år og selvlært programmør og Webudvikler.<br />
                         Jeg brænder for at kode og designe flotte hjemmesider.<br />
                     </p>
                     <a href="{% url 'about' %}" class="btn btn-outline-light">Læs mere</a>
@@ -61,7 +61,7 @@
                                     <h5 class="card-title"><a href="{% url 'project_detail' slug=project.slug %}">{{ project.title }}</a></h5>
                                     <p class="card-text">{{ project.description|safe|truncatewords:10 }}</p>
                                     {% if project.tech %}
-                                        <p class="card-text text-muted"><b>Teknologier:</b> {{ project.tech|safe }}</p>
+                                        <p class="card-text text-muted"><b>Teknologier:</b> {% for tech in project.tech.all %}{{ tech }}, {% endfor %}</p>
                                     {% endif %}
                                 </div>
                                 <div class="card-footer">

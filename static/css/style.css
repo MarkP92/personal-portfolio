@@ -181,10 +181,11 @@ li {
 }
 
 .code-box {
-    background: #979797;
-    border-radius: 10%;
-    color: #f8f9fa;
-    padding: 2px 4px 2px 4px;
+    background: #ebe8e8;
+    border-radius: 20px;
+    color: #585858;
+    padding: 8px 16px 8px 16px;
+    margin: 5px;
 }
 
 /* SKILL ICON LIST */ 
