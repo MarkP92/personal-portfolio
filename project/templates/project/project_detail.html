@@ -15,14 +15,14 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ project.title }}</h5>
                         <p class="card-text">{{ project.description|safe }}</p>
-                        {% if project.tech %}
-                            <p class="card-text text-muted"><b>Teknologier:</b> {% for tech in project.tech.all %}<span class="code-box">{{ tech }}</span>{% endfor %}</p>
-                        {% endif %}
                         {% if project.website %}
                             <a href="{{ project.website }}" target="_blank"><button class="btn btn-outline-dark">Website</button></a>
                         {% endif %}
                         {% if project.github %}
                             <a href="{{ project.github }}" target="_blank"><button class="btn btn-outline-dark">GitHub</button></a>
+                        {% endif %}
+                        {% if project.tech %}
+                            <p class="card-text text-muted" id="techs"><b>Teknologier:</b> {% for tech in project.tech.all %}<span class="code-box">{{ tech }}</span>{% endfor %}</p>
                         {% endif %}
                     </div>
                 </div>
