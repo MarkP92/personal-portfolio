@@ -3,6 +3,7 @@ html {
     font-size: 16px;
     overflow-x: hidden;
     height: 100%;
+    
 }
 
 *::before *::after {
@@ -18,6 +19,9 @@ body {
     background-color: #efefef;
     display: block;
     border: none;
+    background-image: url(../img/lines.png);
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: lighten;
 }
 
 body p {
@@ -62,6 +66,7 @@ ul {
 }
 
 li {
+    display: inline-block;
     padding: 5px;
 }
 
@@ -91,7 +96,7 @@ li {
     background: linear-gradient(#caebf2, transparent 80%), linear-gradient(0deg, #efefef, transparent 2%), url(../img/new_hero.jpg);
     background-repeat: no-repeat;
     background-position: center center;
-    height: 100vh;
+    height: 105vh;
     width: 100%;
     background-size: cover;
     margin: 0;
@@ -124,12 +129,6 @@ li {
 }
 
 /* MAIN CONTENT */
-.main-content {
-    background-image: url(../img/lines.png);
-    background-color: rgba(255, 255, 255, 0.5);
-    background-blend-mode: lighten;
-}
-
 .section-header {
     font-weight: 700;
     font-size: 1.8rem;
@@ -159,7 +158,7 @@ li {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 60vh;
+    height: 50vh;
 }
 
 .code-box {
@@ -172,9 +171,8 @@ li {
 /* SKILL ICON LIST */ 
 .skills {
     list-style-type: none;
-    font-size: 1.2em;
     margin: auto;
-    padding: 25px;
+    padding: 1.2rem;
 }
 
 .skill-item {
@@ -213,6 +211,7 @@ li {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    /* height: 50vh; */
 }
 
 /* BLOG */
