@@ -82,20 +82,8 @@ li {
     color: rgba(70, 69, 69, 0.9)
 }
 
-#menu {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-}
-
-#menu-wrap {
-    position: relative;
-}
-
-#menu.fixed {
-    position: fixed;
-    top: 0;
+.navbar {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* HERO */
@@ -103,16 +91,16 @@ li {
     background: linear-gradient(#caebf2, transparent 80%), linear-gradient(0deg, #efefef, transparent 2%), url(../img/new_hero.jpg);
     background-repeat: no-repeat;
     background-position: center center;
-    height: 95vh;
+    height: 100vh;
     width: 100%;
     background-size: cover;
     margin: 0;
+    margin-top: -65px;
 }
 
 .inside-jumbo {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
     align-items: center;
     height: 85vh;
 }
@@ -179,10 +167,6 @@ li {
     border-radius: 20px;
     background: #585858;
     padding: 0.6rem;
-}
-
-#techs {
-
 }
 
 /* SKILL ICON LIST */ 
@@ -332,10 +316,6 @@ li {
     h1,h2,h3,h4,h5,h6 {
         font-weight: 400;
         font-size: 1.5rem;
-    }
-
-    .navbar-light .navbar-nav .nav-link {
-        font-size: 0.9em!important;
     }
 }
 

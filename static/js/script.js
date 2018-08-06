@@ -6,21 +6,14 @@ $(document).ready(function() {
 
 // FIXED HEADER ON SCROLL UP
 $(document).ready(function() {
-    var previousScroll = 0,
-        headerOffset = $('#menu').offset().top;
-    $('#menu-wrap').height($('#menu').height());
-    $(window).scroll(function() {
-        var currentScroll = $(this).scrollTop();
-        if(currentScroll > headerOffset) {
-            if (currentScroll > previousScroll) {
-                $('#menu').fadeOut();
+    var prevScroll = window.pageYOffset;
+    $(window).scroll(function(){
+        var currentScroll = window.pageYOffset;
+            if (prevScroll > currentScroll) {
+                $('header').addClass('sticky-top');
             } else {
-                $('#menu').fadeIn();
-                $('#menu').addClass('fixed');
+                $('header').removeClass('sticky-top');
             }
-        } else {
-             $('#menu').removeClass('fixed');   
-        }
-        previousScroll = currentScroll;
-    });
+            prevScroll = currentScroll;
+    })
 });
