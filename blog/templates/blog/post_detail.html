@@ -8,8 +8,8 @@
         <div class="row">
             <div class="col-md-12">
                 <h1 class="post-title post">{{ post.title }}</h1>
-                    <p class="muted-text post"><a href="{% url 'category_detail' slug=post.category.slug %}">{{ post.category }}</a></p>
-                    <p class="date post author post">{{ post.published_at }}</p>
+                    <p class="text-muted post"><a href="{% url 'category_detail' slug=post.category.slug %}">{{ post.category }}</a></p>
+                    <p class="date post author post"><i class="fa fa-fw fa-calendar"></i>{{ post.published_at }}</p>
                 {% if post.image %}
                     <img class="img-fluid" src="{{ post.image.url }}" alt="Blog Featured Image">
                 {% endif %}

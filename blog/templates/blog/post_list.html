@@ -16,8 +16,9 @@
                     {% endif %}
                     <div class="card-body">
                         <h5 class="card-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h5>
-                        <p class="card-text text-muted">{{ post.author }}<br>
-                        {{ post.created_at }}</p>
+                        <p class="card-text text-muted"><i class="fa fa-fw fa-user"></i>{{ post.author }}<br>
+                            <i class="fa fa-fw fa-calendar"></i>{{ post.created_at }}
+                        </p>
                         <p>{{ post.text|safe|truncatewords:10 }}</p>
                         <a href="{% url 'post_detail' slug=post.slug %}" class="btn btn-outline-dark">Læs mere</a>
                     </div>
