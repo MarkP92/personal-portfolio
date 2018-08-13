@@ -3,6 +3,7 @@ from django.forms import ModelForm
 from mediumeditor.widgets import MediumEditorTextarea
 from blog.models import Post
 
+# Form to add posts
 class PostForm(forms.ModelForm):
 
     class Meta:

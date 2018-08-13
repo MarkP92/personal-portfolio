@@ -3,6 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from .forms import ContactForm
 
+# Function view for contact
 def contactView(request):
     if request.method == 'GET':
         form = ContactForm()
@@ -20,5 +21,6 @@ def contactView(request):
             return redirect('send')
     return render(request, 'contact/contact.html', {'form' : form})
 
+# Function view for email send
 def sendView(request):
     return render(request, 'contact/send.html')
