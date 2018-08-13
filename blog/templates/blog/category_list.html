@@ -13,7 +13,7 @@
                 <ul>
                     <li><h2><a href="{% url 'category_detail' slug=category.slug %}">{{ category.title }}</a></h2></li>
                     {% for post in category.post_set.all %}
-                    <div class="card">
+                    <div class="card mb-3">
                             {% if post.image %}
                                 <img class="card-img-top" src="{{ post.image.url }}" class="img-fluid" alt="Blog Featured Image">
                             {% endif %}

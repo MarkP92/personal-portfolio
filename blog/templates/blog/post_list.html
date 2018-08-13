@@ -10,7 +10,7 @@
     <div class="row">
         {% for post in post_list %}
             <div class="col-md-8">
-                <div class="card">
+                <div class="card mb-3">
                     {% if post.image %}
                         <img class="card-img-top" src="{{ post.image.url }}" class="img-fluid" alt="Blog Featured Image">
                     {% endif %}
@@ -26,7 +26,7 @@
             </div>
         {% endfor %}
         <div class="col-md-4">
-            <div class="sidebar">
+            <div class="sidebar mb-3">
                 <h5><a href="{% url 'category_list' %}">KATEGORIER</a></h5>
                 <ul class="cat-list">
                     {% for category in categories %}
