@@ -1,4 +1,4 @@
-# personal-portfolio
+# Portfolio
 My Personal Portfolio Website
 
 Work in progress!
