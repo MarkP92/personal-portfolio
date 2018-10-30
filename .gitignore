@@ -1,6 +1,5 @@
-# SECRETS
-MyPortfolio/secrets.py
-MyPortfolio/settings_dev.py
+# SETTINGS
+MyPortfolio/settings/dev.py
 
 # PYC files
 *.pyc

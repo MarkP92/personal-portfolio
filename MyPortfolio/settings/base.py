@@ -12,20 +12,16 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+TEMPLATE_DIR = os.path.join(BASE_DIR, '../templates')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECRET KEY
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'f=)&d(hhc&++r0a3&b45at6fg9u@ls%d_42gdo%01ss#_^r&9^')
+SECRET_KEY = os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
-
-# Base URL and allowed hosts
-BASE_URL = "https://www.mark-petersen.dk"
-#ALLOWED_HOSTS = ['mark-petersen.herokuapp.com', '127.0.0.1', '.mark-petersen.dk']
+DEBUG = False
 
 # Application definition
 INSTALLED_APPS = [
@@ -79,7 +75,7 @@ WSGI_APPLICATION = 'MyPortfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, '../db.sqlite3'),
     }
 }
 
@@ -115,21 +111,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, '../static')]
+STATIC_ROOT = os.path.join(BASE_DIR, '../staticfiles')
 
 # Media files (User Uploads)
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-# Email
-EMAIL_USE_TLS = True
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_PASSWORD = 'xxxx'
-EMAIL_HOST_USER = 'xxxx@gmail.com'
-EMAIL_PORT = 587
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+MEDIA_ROOT = os.path.join(BASE_DIR, '../media')
 
 # Heroku: Update database configuration from $DATABASE_URL.
 #import dj_database_url
@@ -140,12 +127,4 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # https://warehouse.python.org/project/whitenoise/
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# SSL and security
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-# Configure Django App for Heroku.
-import django_heroku
-django_heroku.settings(locals())
