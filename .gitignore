@@ -14,5 +14,8 @@ MyPortfolio/settings_dev.py
 # DATABASE
 *.sqlite3
 
+# .IDEA
+.idea/
+
 # OTHER
 templates/base_test.html

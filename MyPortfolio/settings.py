@@ -25,7 +25,7 @@ DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
 # Base URL and allowed hosts
 BASE_URL = "https://www.mark-petersen.dk"
-ALLOWED_HOSTS = ['mark-petersen.herokuapp.com', '127.0.0.1', '.mark-petersen.dk']
+#ALLOWED_HOSTS = ['mark-petersen.herokuapp.com', '127.0.0.1', '.mark-petersen.dk']
 
 # Application definition
 INSTALLED_APPS = [
@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
-    'mediumeditor',
     'about',
     'blog',
     'contact',
@@ -133,16 +132,20 @@ EMAIL_PORT = 587
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 # Heroku: Update database configuration from $DATABASE_URL.
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+#import dj_database_url
+#db_from_env = dj_database_url.config(conn_max_age=500)
+#DATABASES['default'].update(db_from_env)
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # SSL and security
 SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
